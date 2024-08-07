@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* 아티클1의 슬라이드 */
+#slide{
+    width: 100%;
+    height: auto;
+}
+#slide div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#slide div img{
+    width: 100%;
+    height: auto;
+}
+#slide div p{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: #fff;
+    z-index: 999;
+
+    font-weight: bolder;
+}
+/* 아티클2의 내용 */
+#slide2{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+#slide2 div p{
+    position: absolute;
+    top: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* 첫번째 스크롤 이미지 */
+.product_slide{
+    width: 100%;
+    height: 80%;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 0px 16px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    grid-template-rows: repeat(1, auto);
+    grid-auto-columns: calc(33.3333% - 3.33333px);
+    gap: 24px 5px;
+}
+.product_slide li{
+    cursor: pointer;
+    background-color: aquamarine;
+}
+/* product_slide 스크롤 바 숨기기 */
+.product_slide::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
