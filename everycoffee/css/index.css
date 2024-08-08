@@ -1,11 +1,20 @@
 @charset "UTF-8";
 
+/* 배너 */
+#banner img {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+}
+
 /* 아티클1의 슬라이드 */
-#slide{
+#slide {
     width: 100%;
     height: auto;
 }
-#slide div{
+
+#slide div {
     height: 100%;
     width: 100%;
     display: flex;
@@ -13,10 +22,12 @@
     justify-content: center;
     position: relative;
 }
-#slide div img{
+
+#slide div img {
     width: 100%;
     height: auto;
 }
+
 /* #slide div p{
     position: absolute;
     bottom: 18px;
@@ -27,19 +38,20 @@
 } */
 
 /* 아티클2의 내용 */
-#slide2{
+#slide2 {
     width: 100%;
     height: auto;
     position: relative;
 }
 
 /* slide2 스크롤 이미지 */
-#slide2>p{
-    margin-top: 30px;
+#slide2>p {
+    margin-top: 50px;
     padding-left: 16px;
     font-weight: bolder;
 }
-.recommendation_slide{
+
+.recommendation_slide {
     width: 100%;
     height: auto;
     overflow-x: scroll;
@@ -52,47 +64,49 @@
     grid-auto-columns: calc(28.57% - 3.33333px);
     gap: 24px 5px;
 }
-.recommendation_slide li{
+
+.recommendation_slide li {
     cursor: pointer;
     position: relative;
 }
+
 /* product_slide 스크롤 바 숨기기 */
 .recommendation_slide::-webkit-scrollbar {
     display: none;
 }
-.recommendation_slide img{
+
+.recommendation_slide img {
     width: 100%;
     height: auto;
 }
-.recommendation{
+
+.recommendation {
     width: 100%;
-    height: 50px;
+    height: auto;
+    text-align: center;
 }
-.recommendation_name{
+
+.recommendation_name {
     width: 100%;
     font-size: 13px;
-    text-align: center;
-    font-weight: bold;
+    font-weight: 600;
 }
-.recommendation_price{
-    font-size: 12px;
-    text-align: center;
-}
-
 
 /* slide3 스크롤 이미지 */
-#slide3{
+#slide3 {
     width: 100%;
     height: auto;
     position: relative;
     /* background-color: rgb(240, 250, 255); */
 }
-#slide3>p{
-    margin-top: 30px;
+
+#slide3>p {
+    margin-top: 50px;
     padding-left: 16px;
     font-weight: bolder;
 }
-.bestmenu_slide{
+
+.bestmenu_slide {
     width: 100%;
     height: auto;
     overflow-x: scroll;
@@ -105,45 +119,48 @@
     grid-auto-columns: calc(28.57% - 3.33333px);
     gap: 24px 5px;
 }
-.bestmenu_slide li{
+
+.bestmenu_slide li {
     cursor: pointer;
     position: relative;
 }
+
 /* product_slide 스크롤 바 숨기기 */
 .bestmenu_slide::-webkit-scrollbar {
     display: none;
 }
-.bestmenu_slide img{
+
+.bestmenu_slide img {
     width: 100%;
     height: auto;
 }
-.bestmenu{
+
+.bestmenu {
     width: 100%;
-    height: 50px;
-}
-.bestmenu_name{
-    width: 100%;
-    font-size: 13px;
-    text-align: center;
-    font-weight: bold;
-}
-.bestmenu_price{
-    font-size: 12px;
+    height: auto;
     text-align: center;
 }
 
+.bestmenu_name {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+}
+
 /* slide4 스크롤 이미지 */
-#slide4{
+#slide4 {
     width: 100%;
     height: auto;
     position: relative;
 }
-#slide4>p{
-    margin-top: 30px;
+
+#slide4>p {
+    margin-top: 50px;
     padding-left: 16px;
     font-weight: bolder;
 }
-.md_slide{
+
+.md_slide {
     width: 100%;
     height: auto;
     overflow-x: scroll;
@@ -156,34 +173,30 @@
     grid-auto-columns: calc(28.57% - 3.33333px);
     gap: 24px 5px;
 }
-.md_slide li{
+
+.md_slide li {
     cursor: pointer;
     position: relative;
 }
+
 /* product_slide 스크롤 바 숨기기 */
 .md_slide::-webkit-scrollbar {
     display: none;
 }
-.md_slide img{
+
+.md_slide img {
     width: 100%;
     height: auto;
 }
-.md{
+
+.md {
     width: 100%;
-    height: 50px;
+    height: auto;
+    text-align: center;
 }
-.md_name{
+
+.md_name {
     width: 100%;
     font-size: 13px;
-    text-align: center;
-    font-weight: bold;
+    font-weight: 600;
 }
-.md_price{
-    font-size: 12px;
-    text-align: center;
-}
-
-
-
-
-
