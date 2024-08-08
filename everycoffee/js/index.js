@@ -14,7 +14,6 @@ $(document).ready(function () {
 
 
 $('.drag_slide').draggable({axis:"x", containment:"parent"});
-
   document.addEventListener('DOMContentLoaded', () => {
     const sliders = document.querySelectorAll('.drag_slide');
     sliders.forEach(slider => {
