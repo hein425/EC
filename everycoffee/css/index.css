@@ -29,10 +29,9 @@
 /* 아티클2의 내용 */
 #slide2{
     width: 100%;
-    height: 280px;
+    height: auto;
     position: relative;
 }
-
 
 /* slide2 스크롤 이미지 */
 #slide2>p{
@@ -84,7 +83,7 @@
 /* slide3 스크롤 이미지 */
 #slide3{
     width: 100%;
-    height: 280px;
+    height: auto;
     position: relative;
     /* background-color: rgb(240, 250, 255); */
 }
@@ -136,7 +135,7 @@
 /* slide4 스크롤 이미지 */
 #slide4{
     width: 100%;
-    height: 280px;
+    height: auto;
     position: relative;
 }
 #slide4>p{
@@ -183,4 +182,8 @@
     font-size: 12px;
     text-align: center;
 }
+
+
+
+
 

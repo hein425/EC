@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFpop</title>
+    <link rel="stylesheet" href="css/pop.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COFFEE</h1>
+        <img src="img/popup/coffe.png" alt="상품 이미지">
+        <P style="text-align: center;" >아메리카노</P>
+        <form>
+            <div class="form-group">
+                <label for="bean-type">beans</label>
+                <select id="bean-type" name="bean-type">
+                    <option value="ethiopia">에티오피아</option>
+                    <option value="Blue Mountain">블루마운틴</option>
+                    <option value="Kona">코나</option>
+                    <option value="Signature">시그니처블렌드</option>
+                    <option value="Signature">[디카페인]</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="size">size</label>
+                <select id="size" name="size">
+                    <option value="short">숏</option>
+                    <option value="grande">그랑데</option>
+                    <option value="venti">벤티</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="tem"></label>
+              <label>
+                <input type="checkbox" id="hot" name="option" value="hot">
+                hot
+              </label>
+              <label>
+                <input type="checkbox" id="ice" name="option" value="ice">
+                ice (amount)
+              </label>
+              <div class="slider-container" id="ice-slider-container">
+                <input type="range" id="tem" name="tem" min="0" max="3" step="1">
+                  <div class="range-labels">
+                    <span>0</span>
+                    <span>min</span>
+                    <span>more</span>
+                    <span>max</span>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="shot">+shot</label>
+                <input type="range" id="shot" name="shot" min="0" max="3" step="1">
+                <div class="range-labels">
+                    <span>+0</span>
+                    <span>+1</span>
+                    <span>+2</span>
+                    <span>+3</span>
+                </div>
+             
+                <div class="quantity-container">
+                  <label for="quantity">수량</label>
+                  <div class="quantity-buttons">
+                      <button type="button" onclick="document.getElementById('quantity').stepDown()">-</button>
+                      <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                      <button type="button" onclick="document.getElementById('quantity').stepUp()">+</button>
+                  </div>
+                </div>
+            </div>    
+            <div class="form-group">
+                <input type="button" value="0000원 담기" onclick="window.location.href='basket.html'">
+            </div>
+        </form>
+    </div>
+</body>
+
+<!-- 복붙함 ㅈㅅㅎㅎ -->
+<script>    
+  document.getElementById('ice').addEventListener('change', function() {
+      const iceSliderContainer = document.getElementById('ice-slider-container');
+      if (this.checked) {
+          iceSliderContainer.style.display = 'block';
+      } else {
+          iceSliderContainer.style.display = 'none';
+      }
+  });
+</script>
+
+
+</html>
