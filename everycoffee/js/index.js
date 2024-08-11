@@ -60,3 +60,12 @@ $('.drag_slide').draggable({axis:"x", containment:"parent"});
       });
     });
   });
+
+  const openmembershipbutton = document.getElementById("open-membership");
+  const dialog = document.getElementById("my-membership");
+
+  openmembershipbutton.addEventListener('click', () => {
+    dialog.showModal();
+  });
+
+  
