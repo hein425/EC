@@ -127,19 +127,28 @@ li button {
     border-radius: 0 0 20px 20px;
     padding: 20px 50px 10px 50px;
 }
-.barcode{
-    font-weight: 600;
+#my-membership ul{
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 1.7;
+    font-weight: 600;
 }
+.barcode li p{
+    color: rgb(204, 34, 34);
+}
+.reward-points{
+    font-size: 15pt;
+}
+
 #my-membership img{
-    margin: 5% 0 1% 0;
+    margin: 4% 0 1% 0;
     width: 100%;
     height: auto;
 }
 .barcode-close{
+    cursor: pointer;
     text-align: right;
     background-color: goldenrod;
     margin: 5%;
