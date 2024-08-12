@@ -140,6 +140,7 @@ li button {
     height: auto;
 }
 .barcode-close{
+    cursor: pointer;
     text-align: right;
     background-color: goldenrod;
     margin: 5%;
