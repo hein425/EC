@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* 전체설정 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style-type: none;
+}
+img{
+    vertical-align: bottom;
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --color-main-beige01: #F8F0E5;
+    --color-main-beige02: #EADBC8;
+    --color-main-beige03: #DAC0A3;
+    --color-main-navy: #102C57;
+}
+
+/* 마이페이지 설정 */
+#mypage_wrapper{
+    width: 600px;
+    height: 100vh;
+    background-color:aliceblue;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리 구간 ##################################################### */
+@media screen and (max-width: 600px) {
+    #wrapper{
+     width: 100%;
+   }
+
+}
