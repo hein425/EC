@@ -138,6 +138,12 @@ li button {
 .barcode li p{
     color: rgb(204, 34, 34);
 }
+.barcode li:nth-child(1){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
 .reward-points{
     font-size: 15pt;
 }

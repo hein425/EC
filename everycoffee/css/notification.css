@@ -1,5 +1,21 @@
-ul{
+.notification-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1% 0 1% 0;
+
+    border-bottom: 1px solid #e2e2e2;
+}
+#notification-content{
+    height: 100vh;
+}
+.notification-date{
+    margin: 3% auto;
+    width: 93%;
+    background-color: aquamarine;
+}
+.notification-date li{
+
 }
