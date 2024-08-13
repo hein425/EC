@@ -8,44 +8,54 @@
     <link rel="stylesheet" href="../css/mypage.css">
     <title>Every Coffee</title>
 </head>
-
+    <!-- 프로필(이미지 / 닉네임) > 설정(닉네임,이름,이메일,비밀번호 변경)
+    주소 > 주소(수정, 추가, 삭제)
+    로그아웃 / 회원탈퇴 -->
 <body>
     <section id="mypage_wrapper">
         <header id="mypage_header">
             <ul>
-                <li>뒤로</li>
-                <li>LOGO</li>
-                <li>홈</li>
+                <li><a href="#">< 뒤로</a></li>
+                <li><a href="#">LOGO</a></li>
+                <li><a href="#">홈</a></li>
             </ul>
         </header>
 
         <article class="profile">
-            <img src="" alt="">
-            <p class="p_nickname">카페인뱀파이어</p>
-            <p class="p_adress">주소 ~ ~ ~</p>
+            <div class="p_img">
+                <div><img src="../img/myage/profile.jpg" alt=""></div>
+            </div>
+            <div class="p_text">
+                <p class="p_nickname">'<span>날뛰는고라니</span>' 님</p>
+                <p class="p_adress">주소 : 대구 중구 그린컴퓨터 5층</p>
+            </div>
         </article>
 
-        <article>
+        <article class="box">
             <ul>
-                <li>적립금</li>
-                <li>쿠폰함</li>
-                <li></li>
+                <li><a href="#">적립금</a></li>
+                <li><a href="#">쿠폰함</a></li>
+                <li><a href="#">내 후기</a></li>
             </ul>
         </article>
 
-        <p>
-            프로필(이미지 / 닉네임) > 설정(닉네임,이름,이메일,비밀번호 변경)
-            주소 > 주소(수정, 추가, 삭제)
-            로그아웃 / 회원탈퇴
+        <article class="order_history">
+            <ul>
+                <li><a href="#">주문내역</a></li>
+                <li><a href="#">취소내역</a></li>
+                <li><a href="#">즐겨찾기</a></li>
+            </ul>
+        </article>
 
+        <br>
 
-            적립금 / 쿠폰/ 내후기
-
-            주문내역
-            취소내역
-            즐겨찾기내역
-        </p>
+        <div class="footer">
+            <p>고객센터</p>
+            <p>자주 묻는 질문</p>
+            <p>공지사항</p>
+            <p>약관확인</p>
+        </div>
+        
     </section>
 </body>
-
 </html>
