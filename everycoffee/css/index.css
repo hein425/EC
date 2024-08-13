@@ -37,6 +37,15 @@
     font-weight: bolder;
 } */
 
+
+.new{
+background-color: rgb(16,44,87);
+color: #fff;
+display: inline-block;
+padding: 0 5%;
+border-radius: 50% ;
+
+}
 /* 아티클2의 내용 */
 #slide2 {
     width: 100%;
@@ -46,7 +55,7 @@
 
 /* slide2 스크롤 이미지 */
 #slide2>p {
-    margin-top: 50px;
+    margin-top: 7%;
     padding-left: 16px;
     font-weight: bolder;
 }
@@ -101,7 +110,7 @@
 }
 
 #slide3>p {
-    margin-top: 50px;
+    margin-top: 15%;
     padding-left: 16px;
     font-weight: bolder;
 }
@@ -155,7 +164,7 @@
 }
 
 #slide4>p {
-    margin-top: 50px;
+    margin-top: 15%;
     padding-left: 16px;
     font-weight: bolder;
 }
@@ -179,7 +188,6 @@
     position: relative;
 }
 
-/* product_slide 스크롤 바 숨기기 */
 .md_slide::-webkit-scrollbar {
     display: none;
 }
@@ -199,4 +207,12 @@
     width: 100%;
     font-size: 13px;
     font-weight: 600;
+}
+
+/* 가게정보  */
+#information{
+    font-size: 0.7rem;
+    line-height: 1.7;
+    padding: 3%;
+    background-color: #eeeeee;
 }
