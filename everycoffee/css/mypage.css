@@ -5,6 +5,8 @@
     font-weight: 400;
     font-style: normal;
 }
+
+
 /* 전체설정 */
 *{
     margin: 0;
@@ -34,11 +36,15 @@ a{
     height: 100vh;
     background-color:aliceblue;
     margin: 0 auto;
+    border-left: solid #000 0.5px;
+    border-right: solid #000 0.5px;
+    box-sizing: border-box;
 }
 #mypage_header{
     width: 100%;
     height: 50px;
-    background-color: #DAC0A3;
+    background-color: #fff;
+    border-bottom: solid #000 0.5px;
 }
 #mypage_header ul{
     display: flex;
@@ -46,16 +52,29 @@ a{
     align-items: center;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 #mypage_header ul li{
 
 }
+#mypage_header ul li:nth-child(1){
+    margin-left: 25px;
+}
+#mypage_header ul li:nth-child(3){
+    margin-right: 25px;
+}
+.logo img{
+    width: 50px;
+    
+    height: auto;
+}
+
 
 /* 프로필 설정 */
 .profile{
     width: 100%;
     height: 250px;
-    background-color: #F8F0E5;
+    background-color: var(--color-main-beige01);
     display: flex;
 }
 .p_img{
@@ -70,6 +89,7 @@ a{
     height: 150px;
     overflow: hidden;
     border-radius: 50%;
+    background-color: aliceblue;
 }
 .p_img img{
     width: 100%;
@@ -89,16 +109,18 @@ a{
     margin: 5px 0;
 }   
 .p_nickname{
+    font-weight: 600;
     font-size: 30px;
 }
 .p_adress{
     font-size: 15px;
 }
 
-
+/* 적립금 라인 */
 .box{
     width: 100%;
-    height: 70px;
+    height: 60px;
+    margin: 10px 0;
 }
 .box ul{
     height: 100%;
@@ -111,16 +133,26 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     box-sizing: border-box;
     cursor: pointer;
 }
+.box ul li:nth-child(2){
+    border-left: solid #000 1px;
+    border-right: solid #000 1px;
+}
 
+.box ul li a{
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+    color: #000;
+}
+
+/* 주문내역 설정 */
 .order_history{
     width: 100%;
     height: 250px;
     /* background-color: #102C57; */
-    margin-top: 30px;
 }
 .order_history ul{
     width: 100%;
@@ -128,27 +160,45 @@ a{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    gap: 5px;
+    gap: 8px;
 }
 .order_history ul li{
-    background-color: rgb(0, 142, 207);
+    background-color: rgb(206, 234, 253);
     display: flex;
     align-items: center;
-    border: solid 1px #000;
+    /* border: solid 1px #000; */
     box-sizing: border-box;
     cursor: pointer;
 }
+.order_history ul li a{
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    color: #000;
+    margin-left: 10%;
+}
+
+
+
 
 .footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100px;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     /* background-color: #DAC0A3; */
+    margin-top: 180px;
 }
-
+.footer p{
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+    color: #000;
+    /* border: #000 solid 1px; */
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
 
 /* 미디어쿼리 구간 ##################################################### */
 @media screen and (max-width: 600px) {
