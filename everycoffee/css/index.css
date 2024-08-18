@@ -85,6 +85,7 @@ border-radius: 50% ;
 }
 
 .recommendation_slide img {
+    /* background-color: antiquewhite; */
     width: 100%;
     height: auto;
 }
