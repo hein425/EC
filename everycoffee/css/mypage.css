@@ -6,7 +6,6 @@
     font-style: normal;
 }
 
-
 /* 전체설정 */
 *{
     margin: 0;
@@ -27,23 +26,29 @@ a{
     --color-main-beige02: #EADBC8;
     --color-main-beige03: #DAC0A3;
     --color-main-navy: #102C57;
+    --color-strok: #E1E1E1;
 }
 
 /* 마이페이지 설정 */
 #mypage_wrapper{
     position: relative;
     width: 600px;
-    height: 100vh;
-    background-color:aliceblue;
+    height: auto;
+    min-height: 100vh;
+    min-width: 320px;
+    background-color:#F9F9FB;
     margin: 0 auto;
     border-left: solid #000 0.5px;
     border-right: solid #000 0.5px;
     box-sizing: border-box;
 }
 #mypage_header{
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 50px;
-    background-color: #fff;
+    background-color: var(--color-main-navy);
     border-bottom: solid #000 0.5px;
 }
 #mypage_header ul{
@@ -57,153 +62,312 @@ a{
 #mypage_header ul li{
 
 }
+#mypage_header ul li a{
+    font-size: 18px;
+    color: #fff;
+}
 #mypage_header ul li:nth-child(1){
     margin-left: 25px;
 }
 #mypage_header ul li:nth-child(3){
     margin-right: 25px;
 }
-.logo img{
-    width: 50px;
-    
-    height: auto;
+.logo{
+    font-family: 'Pretendard-Regular';
+    letter-spacing: -0.34px;
 }
 
 
 /* 프로필 설정 */
 .profile{
     width: 100%;
-    height: 250px;
-    background-color: var(--color-main-beige01);
+    /* height: 250px; */
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .p_img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
-    height: 100%;
-}
-.p_img>div{
-    width: 150px;
-    height: 150px;
+    width: 27vw;
+    height: 27vw;
+
+    max-width: 250px;
+    max-height: 250px;
+    min-height: 200px;
+    min-width: 200px;
     overflow: hidden;
     border-radius: 50%;
     background-color: aliceblue;
+    margin: 50px 0 30px 0;
 }
 .p_img img{
     width: 100%;
     height: auto;
 }
-
 .p_text{
-    font-family:'Pretendard-Regular';
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    width: 55%;
-    height: 100%;
+    margin-bottom: 70px;
 }
 .p_text p{
-    margin: 5px 0;
+    font-family:'Pretendard-Regular';
+    font-size: 28px;
+    line-height: 38px;
 }   
 .p_nickname{
     font-weight: 600;
     font-size: 30px;
+    color: var(--color-main-navy);
 }
-.p_adress{
-    font-size: 15px;
+.m_update{
+
+}
+.m_update a{
+    font-family:'Pretendard-Regular';
+    font-size: 12px;
+    color: #7A7A7A;
+}
+.m_update i{
+    font-family:'Pretendard-Regular';
+    font-size: 10px;
+    color: #7A7A7A;
 }
 
-/* 적립금 라인 */
-.box{
+
+.white_line{
     width: 100%;
-    height: 60px;
-    margin: 10px 0;
+    height: 5px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-.box ul{
-    height: 100%;
+
+
+/* stemp 설정 */
+#stemp{
+    width: 100%;
+    /* height: 200px; */
+    /* background-color: red; */
+    margin: 70px 0;
+}
+.s_text{
+    font-family:'Pretendard-Regular';
+    margin: 20px 0 20px 5%;
+    line-height: 30px;
+}
+.s_text h2{
+    font-weight: 800;
+    letter-spacing: -0.34px;
+}
+.s_text p{
+
+}
+.stemp_list{
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px 10px;
+    box-sizing: border-box;
+    /* background-color: red; */
+    margin: 0 auto;
 }
-.box ul li{
-    width: 100%;
+.stemp_list li{
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: calc(540px * 0.2 - 8px);
+    height: calc(540px * 0.2 - 8px);
+    box-sizing: border-box;
+}
+.stemp_list li img{
+    width: 50%;
+    height: auto;
+}
+.stemp_list li.addClass{
+    background-color: var(--color-main-navy);
+}
+.stemp_list li.addClass img{
+
+}
+
+/* point, box, order, cancel, review, mydrink 공통 설정 */
+.layout_100{
+    width: 90%;
+    height: 100px;
+    border: solid var(--color-strok) 0.5px;
+    border-radius: 0.5rem;
+    background-color: #fff; 
+    margin: 20px auto;
+    font-family:'Pretendard-Regular';
+}
+.layout_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* point 설정 */
+#point{
+    
+}
+/* box설정 */
+#box{
+    height: 211px !important;
+    display: flex;
+    align-items: center;
+}
+.box_line{
+    width: 1px;
+    height: 70%;
+    background-color: var(--color-strok);
+}
+#box>div{
+    width: calc(50% - 0.5px);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #000; */
-    box-sizing: border-box;
-    cursor: pointer;
 }
-.box ul li:nth-child(2){
-    border-left: solid #000 1px;
-    border-right: solid #000 1px;
+#box>div>ul{
+    /* background-color: red; */
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+#box>div>ul>li{
+    text-align: center;
+    margin: 5px 0;
+    font-weight: 600;
+}
+.cupon_text{
+    color: #DDD;
+    font-size: 19px;
+}
+/* order_history 설정 */
+#order_history{
+    
+}
+/* cancel_history 설정 */
+#cancel_history{
+   
+}
+/* review 설정 */
+#review{
+
 }
 
-.box ul li a{
-    font-family: 'Pretendard-Regular';
-    font-weight: 500;
-    color: #000;
-}
 
-/* 주문내역 설정 */
-.order_history{
-    width: 100%;
-    height: 250px;
-    /* background-color: #102C57; */
+
+
+/* mydrink 설정 */
+#mydrink{
+    position: relative;
+    height: 320px !important;
+    overflow: hidden;
 }
-.order_history ul{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-}
-.order_history ul li{
-    background-color: rgb(206, 234, 253);
+.mydrink_title{
     display: flex;
     align-items: center;
-    /* border: solid 1px #000; */
-    box-sizing: border-box;
-    cursor: pointer;
-}
-.order_history ul li a{
-    font-family: 'Pretendard-Regular';
-    font-weight: 400;
-    color: #000;
-    margin-left: 10%;
-}
-
-
-
-
-.footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 100px;
-    padding: 10px;
+    height: 80px;
+    padding: 20px;
     box-sizing: border-box;
-    /* background-color: #DAC0A3; */
-    margin-top: 180px;
 }
-.footer p{
-    font-family: 'Pretendard-Regular';
-    font-weight: 500;
-    color: #000;
-    /* border: #000 solid 1px; */
-    margin-left: 10%;
+.mydrink_list{
+    display: flex;
+    justify-content: space-around;
+}
+.mydrink_list li{
+    width: 23%;
+    min-width: 110px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.mydrink_list li div{
+    width: 90%;
+    height: 75%;
+    border-radius: 1.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--color-main-beige01);
 }
+.mydrink_list li div img{
+    width: 90%;
+    height: auto;
+}
+
+.mydrink_list li p{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mydrink_more{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.mydrink_more a{
+    color: #7A7A7A;
+    margin-right: 20px;
+}
+
+
+
+/* guide 설정 */
+#guide ul{
+    display: flex;
+    box-sizing: border-box;
+    padding: 5%;
+}
+#guide ul li{
+    margin: 0 10px;
+}
+#guide ul li a{
+    font-family:'Pretendard-Regular';
+    font-size: 15px;
+    color: #7A7A7A;
+}
+
 
 /* 미디어쿼리 구간 ##################################################### */
 @media screen and (max-width: 600px) {
     #mypage_wrapper{
      width: 100%;
+     border-left: none;
+     border-right: none;
    }
+   .stemp_list li{
+    width: calc(90vw * 0.2 - 8px);
+    height: calc(90vw * 0.2 - 8px);
+   }
+   .layout_100{
+    margin: 10px auto;
 
+    }
 }
