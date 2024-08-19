@@ -9,24 +9,48 @@
   height: auto;
   display: grid;
   grid-auto-flow: row; 
-  padding: 16px;
+  padding: 10px;
   margin-top: 8px;
   box-sizing: border-box;
   grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 3.33333px), 1fr)); 
   grid-auto-rows: auto; 
   gap: 24px 5px;
+  font-size: 13px;
 }
 .product li{
   text-align: center;
   /* background-color: antiquewhite; */
   cursor: pointer;
+  background-color: aliceblue;
 }
 .product li img{
   width: 80%;
   height: auto;
   transition: all 1s;
 }
-
+.product li span:hover {
+  
+  color: rgb(155, 243, 12);
+ 
+}
 .product li:hover img{
-  transform: scale(1.2);
+  transform: scale(0.9);
+}
+#money {
+  padding: 10px;
+}
+
+.english{
+  color: #d1d0d0;
+}
+
+/*미디어 쿼리*/
+
+@media (max-width:600px){
+
+}
+
+@media(max-width:75%){
+  
+  
 }
