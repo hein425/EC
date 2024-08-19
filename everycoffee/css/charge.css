@@ -1,0 +1,252 @@
+
+/* 주소검색창 재활용 굿굿 */
+
+.search_back {
+    /* margin:20px auto; */
+    color: black;
+    /* background-image: url(img/Claude_Monet_-_The_Water_Lilies_-_The_Clouds); */
+    width: 95%;
+    height: 95%;
+    /* padding: ; */
+    border: 1px solid rgb(66, 46, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    border-radius: 8px;  
+  }
+  
+  .search_centre {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0; 
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .search-container {
+    color: rgb(65, 65, 65);
+    text-align: center;
+  }
+  
+  .bedal {
+    color: rgb(66, 46, 22);
+  }
+  
+  input[type="text"] {
+    width: 60%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid rgb(218, 192, 163);
+    border-radius: 4px;
+    color: black;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #102c57;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgb(10, 10, 48);
+  }
+
+  /*ㄴ 여까지 주소검색창 */
+
+  /* 요청사항 */
+
+  .back1 {
+    color: rgb(65, 65, 65);
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgb(66, 46, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    padding: 0;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .to-sajang{
+    width: 40%;
+    height: 80%;
+    border-right: 1px solid rgb(66, 46, 22);
+  }
+
+  .to-rider{
+    width: 40%;
+    height: 80%;
+  }
+
+
+    /* 모달 기본 스타일 */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+        /* 모달 내용 스타일 */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+        /* 닫기 버튼 스타일 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 라디오 */
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 20px auto;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-item label {
+    margin-left: 10px;
+}
+
+/* 결제 */
+.back2 {
+    color: rgb(65, 65, 65);
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgb(66, 46, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    padding: 0;
+    border-radius: 8px; 
+  }
+
+  /* 할인 */
+  .back3 {
+    color: rgb(65, 65, 65);
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgb(66, 46, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    padding: 0;
+    border-radius: 8px;
+  }
+  .hal{
+    width: 80%;
+    height: 30%;
+    margin: 1% 1% 1% 1%;
+    padding: 0 0 3% 0;
+    border-bottom: 1px solid rgb(66, 46, 22);
+  }
+  .gift{
+    width: 80%;
+    height: 30%;
+    margin: 1% 1% 1% 1%;
+  }
+  
+  #cup{
+    margin: 3% 1% 1% 1%;
+    width: 70%;
+  }
+
+  /* 최종결제 */
+  .back4 {
+    color: rgb(65, 65, 65);
+    width: 91%;
+    height: 95%;
+    border: 1px solid rgb(66, 46, 22);
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    padding: 2%;
+    border-radius: 8px; 
+  }
+
+ .total-amount {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px;
+ }
+
+ .payment-details {
+    border-top: 1px solid rgb(66, 46, 22);
+    padding-top: 10px;
+ }
+
+ .payment-details .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+ }
+
+ .payment-details .detail-item span {
+    font-size: 14px;
+ }
+
+
+ .payment-details .discount {
+    color: rgb(0, 0, 255);
+ }
+
+ /* 결제버튼 */
+
+ .check-btn {
+    display: inline-block;
+    width: 90%;
+    margin: 7% 3%;
+    padding: 10px 2%;
+    background-color: #102c57;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 2rem;
+  }
+  
+  .check-btn:hover {
+    background-color:  rgb(10, 10, 48);
+  }

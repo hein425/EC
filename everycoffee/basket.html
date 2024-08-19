@@ -86,8 +86,14 @@
 
             <div class="select-cancel">
                 <div class="kxkx1">
-                  <h3><input type="checkbox" id="select-all" > 전체 선택</h3>
+                                
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="select-all" >
+                        <span class="checkmark"></span>전체선택
+                    </label> 
+
                 </div>
+
                 <div class="kxkx2">
                     <a href="" class="cancel-btn">
                         삭제
@@ -96,7 +102,17 @@
              </div>
 
             <div class="cart_back">
-                <input type="checkbox" id="select" class="select">
+
+            <!-- asdf -->
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select1" class="select">
+                    <span class="checkmark"></span>
+                </label>                
+
+            <!-- asdf -->
+
+                
                 <div class="cart-item">
                     <img src="img/basket/coffe.png" alt="상품 이미지">
                     <div class="item-details">
@@ -110,7 +126,12 @@
                     </div>
                 </div>
 
-                <input type="checkbox" id="select" class="select">
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select2" class="select">
+                    <span class="checkmark"></span>
+                </label> 
+                
                 <div class="cart-item">
                     <img src="img/basket/tea.png" alt="상품 이미지">
                     <div class="item-details">
@@ -123,7 +144,13 @@
                     </div>
                 </div>
 
-                <input type="checkbox" id="select" class="select">
+
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select3" class="select">
+                    <span class="checkmark"></span>
+                </label> 
+
                 <div class="cart-item">
                     <img src="img/basket/cake.png" alt="상품 이미지">
                     <div class="item-details">
@@ -137,11 +164,11 @@
             </div>
 
             <div class="excharge">
-                <div><a href="" class="plus-btn">+메뉴 추가</a></div>
+                <div><a href="../everycoffee/detail_page.html" class="plus-btn">+메뉴 추가</a></div>
                 <div>결제예정금액: ₩40000</div>
             </div>
 
-            <a href="" class="check-btn">결제하기</a>
+            <a href="../everycoffee/charge.html" class="check-btn">결제하기</a>
             
 
 
@@ -172,6 +199,17 @@
                 checkbox.checked = document.getElementById('select-all').checked;
             });
         });
+
+        document.querySelectorAll('.cart-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const checkboxId = this.getAttribute('select1');
+            const checkbox = document.getElementById('select1');
+            checkbox.checked = !checkbox.checked; 
+        });
+    }); // 밑에 사진들은 어케 적용되는지 모르겟음....
+
+    
+    
  </script>
 
 
