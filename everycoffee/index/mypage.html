@@ -27,10 +27,10 @@
 
         <article class="profile">            
             <div class="p_img">
-                <img src="../img/mypage/profile.jpg" alt="">
+                <img src="../img/mypage/profile_img.png" alt="">
             </div>
             <div class="p_text"> 
-                <p><span class="p_nickname">날뛰는고라니</span></p>
+                <p><span class="p_nickname">커피좋아</span></p>
                 <p><b>고객</b>님 늘 고마워요.</p>
                 <span class="m_update"><a href="#"><i class="fi fi-rs-pencil"></i> 회원정보 수정 </a></span>
             </div>
@@ -140,6 +140,7 @@
         var totalStamps = 10;
         $('.stemp_list li').click(function(){
             $(this).addClass('addClass');
+
             var usedStamps = $('.stemp_list li.addClass').length;
             var remainingStamps = totalStamps - usedStamps;
             $('.s_count').text(remainingStamps);

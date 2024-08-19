@@ -100,7 +100,7 @@ a{
     min-width: 200px;
     overflow: hidden;
     border-radius: 50%;
-    background-color: aliceblue;
+    background-color: #fff;
     margin: 50px 0 30px 0;
 }
 .p_img img{
@@ -200,7 +200,7 @@ a{
 /* point, box, order, cancel, review, mydrink 공통 설정 */
 .layout_100{
     width: 90%;
-    height: 100px;
+    height: 90px;
     border: solid var(--color-strok) 0.5px;
     border-radius: 0.5rem;
     background-color: #fff; 
