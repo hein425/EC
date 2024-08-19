@@ -94,23 +94,28 @@
   display: flex;
   justify-content: space-between;
   margin: 5% 5% 2% 5%;
-  width: 100%;
+  width: 90%;
   height: 50%;
  }
 
- .kxkx{
+ .kxkx1{
   width: 50%;
-  /* background-color: lightblue; */
-  
+  padding: 5% 3% 0% 5%;
 
- }
+  }
+
+  .kxkx2{
+    width: 50%;
+    padding: 3% 0% 0% 5%;
+   }
+
  .cancel-btn {
   
-  right:10%;
+  right:5%;
   display: inline-block;
   width: 40%;
   margin: 5% 3% 2% 39%;
-  padding: 10px 2%;
+  padding: 2% 2%;
   background-color: #102c57;
   color: white;
   text-align: center;
