@@ -29,6 +29,8 @@ a{
     --color-strok: #E1E1E1;
 }
 
+
+
 /* 마이페이지 설정 */
 #mypage_wrapper{
     position: relative;
@@ -38,8 +40,8 @@ a{
     min-width: 320px;
     background-color:#F9F9FB;
     margin: 0 auto;
-    border-left: solid #000 0.5px;
-    border-right: solid #000 0.5px;
+    border-left: solid var(--color-strok) 1px;
+    border-right: solid var(--color-strok) 1px;
     box-sizing: border-box;
 }
 #mypage_header{
@@ -96,8 +98,8 @@ a{
 
     max-width: 250px;
     max-height: 250px;
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 150px;
+    min-width: 150px;
     overflow: hidden;
     border-radius: 50%;
     background-color: #fff;
@@ -116,12 +118,12 @@ a{
 }
 .p_text p{
     font-family:'Pretendard-Regular';
-    font-size: 28px;
+    font-size: 24px;
     line-height: 38px;
 }   
 .p_nickname{
     font-weight: 600;
-    font-size: 30px;
+    font-size: 27px;
     color: var(--color-main-navy);
 }
 .m_update{

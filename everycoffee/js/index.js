@@ -11,6 +11,9 @@ $(document).ready(function() {
         var width = $(this).outerWidth();
         $('.gnb_line').css("left", leftPos + "px").css("width", width + "px");
     });
+    $('.bk').click(function(){
+        $('.gnb_line').css({"width" : "0px"});
+    })
 
   // mainContent 로딩 함수
   async function includeHTML(url, targetSelector) {
@@ -34,7 +37,8 @@ $(document).ready(function() {
       }
   }
 
-  // slick 슬라이더 초기화 함수
+
+  // slick 슬라이더 함수
   function initializeSlick() {
       $('.slick').slick({
           autoplay: true,        // 자동 재생 활성화
@@ -48,10 +52,9 @@ $(document).ready(function() {
           slidesToScroll: 1     
       });
   }
-  // 드래그 슬라이드 초기화 함수
+  // 드래그 슬라이드 함수
   function initializeDragSlide() {
       $('.drag_slide').draggable({axis:"x", containment:"parent"});
-
       const sliders = document.querySelectorAll('.drag_slide');
       sliders.forEach(slider => {
           let isDown = false;
@@ -97,6 +100,7 @@ $(document).ready(function() {
       });
   }
 
+
   // 멤버십 다이얼로그 초기화 함수
   function initializeMembershipButton() {
     const openmembershipbutton = document.getElementById("open-membership");
@@ -111,13 +115,13 @@ $(document).ready(function() {
     closeButton.addEventListener("click", () => {
       dialog.classList.remove('dialog-fade-in');
       dialog.classList.add('dialog-fade-out');
-      
       // 애니메이션이 끝난 후 dialog를 닫음
       setTimeout(() => {
           dialog.close();
       }, 300); // 애니메이션 지속 시간과 일치시킴
     });
   }
+
 
   // detail_page.html을 로드하는 이벤트 핸들러
   $('.gnb li').eq(0).click(async function() {
@@ -145,10 +149,24 @@ $(document).ready(function() {
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
   });
+  $('.gnb li').eq(5).click(async function() {
+    const urlToInclude = 'index/main_md.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+  });
+
+  $('.bk').click(async function() {
+    const urlToInclude = 'index/basket.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+  });
 
   // 페이지 로딩 시 main.html을 로드
   const initialUrlToInclude = 'index/main.html';
   const initialTargetSelector = '#mainContent';
   includeHTML(initialUrlToInclude, initialTargetSelector);
+
+
+
 
 });
