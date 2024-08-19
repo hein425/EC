@@ -28,7 +28,10 @@
     padding: 3.5% 2%;
     border-radius: 3px;
 }
-
+.stemp{
+    text-align: right;
+    color: #929292;
+}
 .loginFields {
     display: flex;
     flex-direction: column;
