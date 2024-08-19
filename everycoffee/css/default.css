@@ -126,11 +126,26 @@ li button {}
     justify-content: space-around;
 }
 
-.gnb li a {
+.gnb li{
     font-family: 'Pretendard-Regular';
     font-weight: 100;
     color: #575757;
+    cursor: pointer;
 }
+.gnb .selected{
+    color: var(--black-1111);
+}
+.gnb_line{
+    position: absolute;
+    bottom: 0;
+    height: 0.28rem;
+    background-color: black;
+    transition: all 0.3s ease-out; 
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+
 
 /* 바코드 설정 */
 #my-membership {

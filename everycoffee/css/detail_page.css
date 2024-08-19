@@ -29,9 +29,7 @@
   transition: all 1s;
 }
 .product li span:hover {
-  
   color: rgb(155, 243, 12);
- 
 }
 .product li:hover img{
   transform: scale(0.9);
