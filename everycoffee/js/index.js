@@ -65,7 +65,19 @@ $('.drag_slide').draggable({axis:"x", containment:"parent"});
   const dialog = document.getElementById("my-membership");
 
   openmembershipbutton.addEventListener('click', () => {
-    dialog.showModal();
+    dialog.classList.remove('dialog-fade-out');
+    dialog.classList.add('dialog-fade-in');
+    // html 기본속성...
+    dialog.showModal(); 
   });
 
-  
+  const closeButton = document.getElementById('close-button');
+  closeButton.addEventListener("click", () => {
+    dialog.classList.remove('dialog-fade-in');
+    dialog.classList.add('dialog-fade-out');
+    
+    // 애니메이션이 끝난 후 dialog를 닫음
+    setTimeout(() => {
+        dialog.close();
+    }, 300); // 애니메이션 지속 시간과 일치시킴
+  });

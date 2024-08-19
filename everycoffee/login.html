@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/default.css">
+  <script src="js/index.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="wrapper">
+    <!-- 멤버쉽 모달창 -->
+    <dialog id="my-membership">
+      <ul class="barcode">
+        <li>반갑습니다. 날뛰는고라니안녀엉님</li>
+        <li>
+          <p>VVIP</p>
+        </li>
+      </ul>
+      <ul class="reward-points">
+        <li>적립금</li>
+        <li>5,000원</li>
+      </ul>
+      <img src="img/main/barcode.PNG" alt="">
+      <p>001 001 001 1234</p>
+      <form method="dialog">
+        <!-- <button type="">닫기</button> -->
+        <button id="close-button" class="barcode-close" type="button"><i class="fi fi-rr-rectangle-xmark"></i></button>
+      </form>
+    </dialog>
+
+    <!-- 헤더 -->
+    <header>
+      <div class="header_top">
+          <ul class="my_page">
+              <li><a href="notification.html">
+                      <i class="fi fi-rs-bell"></i>
+                  </a></li>
+              <li><a href="#">
+                      <button id="open-membership"> <i class="fi fi-rr-barcode"></i></button>
+                  </a>
+              </li>
+          </ul>
+          <h2 class="logo"><a href="index.html"><img src="img/main/every coffee 로고-컵.png" alt=""></a></h2>
+          <ul>
+              <li><a href="#">
+                      <i class="fi fi-rr-search"></i>
+                  </a></li>
+
+              <li><a href="basket.html">
+                      <i class="fi fi-rr-shopping-cart"></i>
+                  </a></li>
+          </ul>
+      </div>
+      <ul class="gnb">
+          <li><a href="detail_page.html">커피</a></li>
+          <li><a href="detail_page.html">에이드</a></li>
+          <li><a href="detail_page.html">스무디</a></li>
+          <li><a href="detail_page.html">티</a></li>
+          <li><a href="detail_page.html">디저트</a></li>
+          <li><a href="detail_page.html">MD</a></li>
+      </ul>
+  </header>
+
+    <!-- 로그인창 전체 -->
+    <section id="member">
+      <form action="" method="post" name="LoginFrm" id="LoginFrm">
+        <!-- 로그인 -->
+        <div class="loginCont">
+          <div class="loginFields">
+            <input type="text" class="login-id" placeholder="아이디" size="12" required>
+            <input type="password" class="login-pw" placeholder="비밀번호" size="10" required>
+          </div>
+          <input type="submit" class="login-btn" value="로그인">
+        </div>
+
+        <!-- 로그인 선택사항 -->
+        <ul>
+          <li>
+            <label for="remember-id">
+              <input type="checkbox" name="remember-id" id="remember-id">아이디 저장하기
+            </label>
+            <label for="autologin">
+              <input type="checkbox" name="autologin" id="autologin">자동 로그인
+              <div class="autologin-text">
+                개인 정보 보호를 위해 본인 기기에서만 이용해주세요.
+              </div>
+            </label>
+          </li>
+        </ul>
+
+        <!-- 소셜 로그인 -->
+        <ul class="another-login">
+          <p>간편하게 로그인하세요!</p>
+          <li>
+            <a href=""><img src="img/login/btn_kakao.png" alt=""></a>
+            <a href=""><img src="img/login/btn_naver.png" alt=""></a>
+            <a href=""><img src="img/login/btn_google.png" alt=""></a>
+          </li>
+        </ul>
+
+        <!-- 회원가입 -->
+        <div class="join">
+          <p><a href="">회원가입</a>하고 적립금 5,000원 받자!</p>
+        </div>
+
+        <!-- 아이디비번찾기 -->
+        <div class="idpw-find">
+          <a href="">아이디 찾기</a>
+          <span>/</span>
+          <a href="">비밀번호 찾기</a>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+      <ul class="footer_gnb">
+        <li><a href="index.html"><i class="fi fi-rr-home"></i><br>HOME</a></li>
+        <li><a href="#"><i class="fi fi-rr-reservation-smartphone"></i><br>ORDER</a></li>
+        <li><a href="#"><i class="fi fi-rr-party-horn"></i><br>EVENT</a></li>
+        <li><a href="#"><i class="fi fi-rr-user"></i><br>MY PAGE</a></li>
+      </ul>
+    </footer>
+  </section>
+</body>
+
+</html>
