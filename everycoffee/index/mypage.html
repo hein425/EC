@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 기본 설정 -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../css/mypage.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    <title>Every Coffee</title>
+</head>
+    <!-- 프로필(이미지 / 닉네임) > 설정(닉네임,이름,이메일,비밀번호 변경)
+    주소 > 주소(수정, 추가, 삭제)
+    로그아웃 / 회원탈퇴 -->
+<body>
+    <section id="mypage_wrapper">
+        <header id="mypage_header">
+            <ul>
+                <li class="back"><a href="javascript:history.back()"><i class="fi fi-rr-angle-left"></i></a></li>
+                <li class="logo"><a href="#">마이페이지</a></li>
+                <li class="home"><a href="../index.html"><i class="fi fi-rr-home"></i></a></li>
+            </ul>
+        </header>
+
+        <article class="profile">            
+            <div class="p_img">
+                <img src="../img/mypage/profile_img.png" alt="">
+            </div>
+            <div class="p_text"> 
+                <p><span class="p_nickname">커피좋아</span></p>
+                <p><b>고객</b>님 늘 고마워요.</p>
+                <span class="m_update"><a href="#"><i class="fi fi-rs-pencil"></i> 회원정보 수정 </a></span>
+            </div>
+        </article>
+
+        <div class="white_line"></div>
+
+        <article id="stemp">
+            <div class="s_text">
+                <h2>나의 스템프 갯수는?</h2>
+                <p><span class="s_count">10</span>개만 더 찍고 무료쿠폰 받아가세요!</p>
+            </div>
+            <ul class="stemp_list">
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+                <li><img src="../img/mypage/stemp_white.png" alt=""></li>
+            </ul>
+        </article>
+
+        <article id="point" class="layout_100 layout_2">
+            <p>에브리커피 포인트</p>
+            <p><span>-</span> P</p>
+        </article>
+
+        <article id="box" class="layout_100">
+            <div class="cupon">
+                <ul>
+                    <li><img src="../img/mypage/coupon.png" alt=""></li>
+                    <li class="cupon_text">사용가능 쿠폰</li>
+                    <li>0장</li>
+                </ul>
+            </div>
+
+            <span class="box_line"></span>
+                
+            <div class="giftbox">
+                <ul>
+                    <li><img src="../img/mypage/gift.png" alt=""></li>
+                    <li class="cupon_text">사용가능 쿠폰</li>
+                    <li>0장</li>
+                </ul>
+            </div>
+        </article>
+ 
+        <article id="order_history" class="layout_100 layout_2">
+            <p>주문내역</p>
+            <p>+</p>
+        </article>
+
+        <article id="cancel_history" class="layout_100 layout_2">
+            <p>취소내역</p>
+            <p>+</p>
+        </article>
+
+        <article id="review" class="layout_100 layout_2">
+            <p>리뷰관리</p>
+            <p>+</p>
+        </article>
+
+        <article id="mydrink" class="layout_100">
+            <h2 class="mydrink_title">나의 음료</h2>
+
+            <ul class="mydrink_list">
+                <li>
+                    <div>
+                        <img src="../img/main/hot_Americano.png" alt="">
+                    </div>
+                    <p>아메리카노</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>콜드브루</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수박주스</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>바닐라라떼</p>
+                </li>
+            </ul>
+
+            <div class="mydrink_more"><a href="#">즐겨찾는 음료 더보기</a></div>
+        </article>
+
+        <article id="guide">
+            <ul>
+                <li><a href="#">고객센터</a></li>
+                <span>|</span>
+                <li><a href="#">이용안내</a></li>
+            </ul>
+        </article>
+    </section>
+
+
+
+
+    <script>
+        var totalStamps = 10;
+        $('.stemp_list li').click(function(){
+            $(this).addClass('addClass');
+
+            var usedStamps = $('.stemp_list li.addClass').length;
+            var remainingStamps = totalStamps - usedStamps;
+            $('.s_count').text(remainingStamps);
+        });
+    </script>
+</body>
+</html>
