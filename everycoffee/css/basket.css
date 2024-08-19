@@ -179,15 +179,14 @@
     font-weight: bold;
   }
   
-  /* .total {
-    color: white;
-    text-align: right;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    float: left;
-  } */
-    
+ .excharge{
+  justify-content: space-between;
+  margin: 2% 5%;
+  display: flex;
+ }
+  .plus-btn{
+    display: inline-block;
+  }
   .check-btn {
     display: inline-block;
     width: 90%;
