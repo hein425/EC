@@ -1,0 +1,94 @@
+body {
+    font-family: "Pretendard-Light", "Black Han Sans", '맑은 고딕';
+    background-color:white;
+    margin: 0;
+    padding: 20px;       
+}
+.container {
+    /* text-align: center; */
+    max-width: 400px;
+    margin: 0 auto;
+    background-color:rgba(165, 159, 159, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.container img{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+.form-group select, .form-group input[type="range"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid rgb(218, 192, 163);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.quantity-container{
+    
+    margin: 20px auto;
+    padding: 20px auto;
+}
+
+.quantity-buttons {
+    display: flex;
+    align-items: center;
+}
+.quantity-buttons button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    background-color: #102c57;
+    color: white;
+    border-radius: 4px;
+}
+.quantity-buttons button:hover{
+    background-color: rgb(10, 10, 48);
+}
+
+
+.quantity-buttons input {
+    width: 50px;
+    text-align: center;
+}
+
+.form-group input[type="button"] {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    background-color: #102c57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+.form-group input[type="submit"]:hover {
+    background-color: rgb(10, 10, 48);
+}
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: #666;
+}

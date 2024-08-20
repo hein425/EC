@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 전체설정 */
+html {
+    font-size: 10px;
+}
+:root{
+    --color-01: rgb(248, 240, 229);
+    --color-02: rgb(234,219,200);
+    --color-03: rgb(218,192,163);
+    --color-04: rgb(16,44,87);
+    --color-layout-border: #dfdfdf;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: bottom;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 레이아웃 설정 */
+#wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-left: solid 1px var(--color-layout-border);
+    border-right: solid 1px var(--color-layout-border);
+    min-width: 320px;
+    color: #000;
+}
+
+.notification-header,
+.notification-date {
+    width: 93%;
+    /* 너비를 93%로 설정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+    box-sizing: border-box;
+    /* 박스 모델 설정 */
+}
+
+.notification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 0 3% 0;
+    font-size: 18px;
+    border-bottom: 1px solid var(--color-layout-border);
+}
+
+.notification-header i {
+    color: #000;
+}
+
+.notification-header h1 {
+    font-size: 2rem;
+}
+
+#notification-content {
+    height: 100vh;
+}
+
+#notification-content ul {
+    padding: 3%;
+    border-bottom: 1px dotted #cccccc;
+    line-height: 2.5;
+}
+
+.notification-date {
+    /* background-color: aquamarine; */
+}
+
+.notification-date li {
+    font-size: 1.2rem;
+    width: 100%;
+}
+.notification-date li h1 {
+    color: var(--color-04);
+    background-color: var(--color-01);
+    display: inline;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 3%;
+}
+.notification-date div {
+    border-bottom: 1px solid #929292;
+    font-size: 2rem;
+}
+
+
+/* 미디어쿼리 구간 ##################################################### */
+@media screen and (max-width: 600px) {
+    #wrapper {
+        width: 100%;
+    }
+}
+

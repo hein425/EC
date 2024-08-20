@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* 아티클1의 슬라이드 */
+#slide{
+    width: 100%;
+    height: auto;
+}
+#slide div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#slide div img{
+    width: 100%;
+    height: auto;
+}
+#slide div p{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: #fff;
+    z-index: 999;
+
+    font-weight: bolder;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* 주소검색창 설정 */
+
+
+.search_back {
+    /* margin:20px auto; */
+    color: black;
+    /* background-image: url(img/Claude_Monet_-_The_Water_Lilies_-_The_Clouds); */
+    width: 100%;
+    height: 100%;
+    /* padding: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search_centre {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0; 
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .search-container {
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .bedal {
+    color: #102c57;
+  }
+  
+  input[type="text"] {
+    width: 60%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid rgb(218, 192, 163);
+    border-radius: 4px;
+    color: black;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #102c57;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgb(10, 10, 48);
+  }
+
+ /* 카트 창 설정 */
+
+ .select-cancel{
+  
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 5% 2% 5%;
+  width: 90%;
+  height: 50%;
+ }
+
+ .kxkx1{
+  width: 50%;
+  padding: 5% 3% 0% 5%;
+
+  }
+
+  .kxkx2{
+    width: 50%;
+    padding: 3% 0% 0% 5%;
+   }
+
+ .cancel-btn {
+  
+  right:5%;
+  display: inline-block;
+  width: 40%;
+  margin: 5% 3% 2% 39%;
+  padding: 2% 2%;
+  background-color: #102c57;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  
+}
+
+ .cart_back {
+    background-color: rgba(218, 192, 163, 0.35);
+    max-width: 80%;
+    height: 50%;
+    margin: 20px 20px;
+    padding:  20px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  h3 {
+    color: #555;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 2px solid rgba(218, 192, 163, 0.26);
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-item img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .item-details {
+    flex: 1;
+    margin-left: 20%;
+    padding: 3% 0;
+  }
+  
+  .item-details h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .item-details p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* .total {
+    color: white;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+  } */
+    
+  .check-btn {
+    display: inline-block;
+    width: 90%;
+    margin: 10px 3%;
+    padding: 10px 2%;
+    background-color: #102c57;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    
+  }
+  
+  .check-btn:hover {
+    background-color:  rgb(10, 10, 48);
+  }
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+

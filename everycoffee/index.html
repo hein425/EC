@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 아이콘cdn -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- css설정 -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/detail_page.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <!-- slider script -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 스크립트 -->
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/basket.js" defer></script>
+    <title>함께하는 커피숍 - Mingle J</title>
+</head>
+
+<body>
+    <section id="wrapper">
+        <header>
+            <div class="header_top">
+                <ul class="my_page">
+                    <li><a href="index/notification.html"><i class="fi fi-rs-bell"></i></a></li>
+                    <li><a href="#"><button id="open-membership"> <i class="fi fi-rr-barcode"></i></button></a></li>
+                </ul>
+                <h2 class="logo"><a href="index.html"><img src="img/main/every coffee 로고-컵.png" alt=""></a></h2>
+                <ul>
+                    <li><a href="#"><i class="fi fi-rr-search"></i></a></li>
+                    <li class="bk"><i class="fi fi-rr-shopping-cart"></i></li>
+                </ul>
+            </div>
+            <ul class="gnb">
+                <li class="selected">커피</li>
+                <li>에이드</li>
+                <li>스무디</li>
+                <li>티</li>
+                <li>디저트</li>
+                <li>MD</li>
+            </ul>
+            <span class="gnb_line"></span>
+        </header>
+
+
+        <!-- 이곳으로 html이 로딩된다.  -->
+        <!-- main_, basket, login -->
+        <main id="mainContent"></main>
+
+
+        <article id="information">
+            <p>COMPANY INFO</p>
+            <p>대표자:정해인조<br>
+                사업자등록번호:123-12-12345<br>
+                통신판매업신고:2024-대구중구-0000호<br>
+                주소:대구광역시 중구 중앙대로 394, 제일빌딩
+            </p>
+        </article>
+
+        <footer>
+            <div>
+                <ul class="footer_gnb">
+                    <li><a href="index.html"><i class="fi fi-rr-home"></i><br>HOME</a></li>
+                    <li><a href="#"><i class="fi fi-rr-reservation-smartphone"></i><br>ORDER</a></li>
+                    <li><a href="#"><i class="fi fi-rr-party-horn"></i><br>EVENT</a></li>
+                    <li><a href="index/login.html"><i class="fi fi-rr-user"></i><br>MY PAGE</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- 멤버쉽 모달창 -->
+        <dialog id="my-membership">
+            <ul class="barcode">
+              <li>반갑습니다. MingleJ는퍼블리셔님</li>
+              <li>
+                <p>VVIP</p>
+              </li>
+            </ul>
+            <ul class="reward-points">
+              <li>적립금</li>
+              <li>5,000원</li>
+            </ul>
+            <img src="img/main/barcode.PNG" alt="">
+            <p>001 001 001 1234</p>
+            <form method="dialog">
+              <!-- <button type="">닫기</button> -->
+              <button id="close-button" class="barcode-close" type="button"><i class="fi fi-rr-rectangle-xmark"></i></button>
+            </form>
+          </dialog>
+    </section>
+</body>
+</html>

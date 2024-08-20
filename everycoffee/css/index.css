@@ -1,0 +1,314 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 클릭시 파란 반응 삭제 */
+    -webkit-tap-highlight-color: transparent;
+}
+ul, ol {
+    list-style-type: none;
+}
+img {
+    vertical-align: bottom;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+:root {
+    --color-main-beige01: #F8F0E5;
+    --color-main-beige02: #EADBC8;
+    --color-main-beige03: #DAC0A3;
+    --color-main-navy: #102C57;
+    --color-strok: #E1E1E1;
+    --color-layout-border: #dfdfdf;
+}
+
+
+/* 레이아웃 설정 */
+#wrapper {
+    position: relative;
+    width: 600px;
+    height: auto;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-left: solid 1px var(--color-layout-border);
+    border-right: solid 1px var(--color-layout-border);
+}
+
+/* header(헤더) 설정 */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid var(--color-layout-border);
+    background-color: rgb(255, 255, 255);
+    z-index: 900;
+}
+.header_top {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.logo a {
+    color: #000;
+    /* background-color: #575757; */
+}
+
+.logo a img {
+    width: 50px;
+    height: auto;
+}
+.my_page {
+    margin-left: 20px;
+}
+.my_page i {
+    color: #000;
+    font-size: 18px;
+}
+.header_top ul {
+    display: flex;
+    margin-right: 20px;
+}
+.header_top ul li:nth-child(1) {
+    margin-right: 15px;
+}
+.header_top ul li i {
+    color: #000;
+    font-size: 18px;
+}
+.bk{
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+    background: none;
+    /* 배경 제거 */
+    border: none;
+    /* 테두리 제거 */
+    all: unset;
+    /* 모든 기본 스타일 제거 */
+    padding: 0;
+    /* 패딩 제거 */
+    display: inline-flex;
+    /* 아이콘을 가운데 정렬 */
+    align-items: center;
+    /* 아이콘을 수직으로 중앙 정렬 */
+    justify-content: center;
+    /* 아이콘을 수평으로 중앙 정렬 */
+}
+
+li button {}
+
+.gnb {
+    width: 100%;
+    height: 40%;
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.gnb li{
+    font-family: 'Pretendard-Regular';
+    font-weight: 100;
+    color: #575757;
+    cursor: pointer;
+}
+.gnb .selected{
+    color: var(--black-1111);
+}
+.gnb_line{
+    position: absolute;
+    bottom: 0;
+    height: 0.28rem;
+    background-color: black;
+    transition: all 0.3s ease-out; 
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+
+
+/* 바코드 설정 */
+#my-membership {
+    /* stiky는 부모자(relative)기준으로 위치값 지정 */
+    /* fixed는 body값을 기준으로 위치값 지정 */
+    position: fixed;
+    left: 50%;
+    top: 0;
+
+    width: calc(600px * 0.6);
+    /* 600px의 80% */
+    transform: translateX(-50%) translateY(-100%);
+
+    background-color: #f8f0e5;
+    box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.40);
+    border: 0;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 50px 0px 50px;
+
+}
+.dialog-fade-out {
+    animation: slideOut 0.3s forwards;
+}
+
+.dialog-fade-in {
+    animation: slideIn 0.3s forwards;
+}
+
+/* 애니메이션 */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, -100%);
+        opacity: 0.5;
+    }
+}
+ 
+#my-membership ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+.barcode li p {
+    color: rgb(204, 34, 34);
+}
+
+.barcode li:nth-child(1) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.reward-points {
+    font-size: 15pt;
+}
+
+#my-membership img {
+    margin: 4% 0 1% 0;
+    width: 100%;
+    height: auto;
+}
+.barcode-close {
+    cursor: pointer;
+    text-align: right;
+    margin: 5% 0 0 0;
+    padding: 3%;
+    font-size: 1.5rem;
+}
+
+/* 가게정보  */
+#information{
+    box-sizing: border-box;
+    font-size: 0.7rem;
+    line-height: 1.7;
+    padding: 3%;
+    margin: 55px 0;
+    background-color: #eeeeee;
+}
+#information p{
+    font-family: 'Pretendard-Regular';
+    font-size: 8px;
+    color: #2e2e2e;
+    margin-left: 2%;
+}
+
+/* footer 설정 */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+}
+footer>div{
+    width: 600px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-left: solid 1px var(--color-layout-border);
+    border-right: solid 1px var(--color-layout-border);
+    border-top: 1px solid var(--color-layout-border);
+}
+.footer_gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer_gnb li {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.0;
+}
+.footer_gnb li a {
+    color: #000;
+    line-height: 0;
+}
+.footer_gnb li i {
+    color: #575757;
+    font-size: 20px;
+}
+
+
+/* 미디어쿼리 구간 ##################################################### */
+@media screen and (max-width: 600px) {
+    #wrapper {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    #my-membership {
+        width: 60%;
+    }
+    footer>div{
+        width: 100%;
+    }
+}
