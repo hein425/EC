@@ -71,19 +71,20 @@ li input {
 }
 .autologin-text {
     display: none;
-    position: fixed;
-    width: calc(600px * 0.7);
-    top: 40%;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: calc(100%+0.1%);
     left: 50%;
+    transition: all 1s ease;
 }
 
 #autologin:checked+.autologin-text {
-    display: inline-block;
+    display: inline;
     padding: 1%;
     font-size: smaller;
     background-color: #eee;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%,90%);
 }
 
 /* -----소셜 로그인----- */
