@@ -47,7 +47,7 @@ border-radius: 50% ;
 
 }
 /* 아티클2의 내용 */
-#slide2 {
+#slide2, #slide3, #slide4, #main_event {
     width: 100%;
     height: auto;
     position: relative;
@@ -103,14 +103,11 @@ border-radius: 50% ;
 }
 
 /* slide3 스크롤 이미지 */
-#slide3 {
-    width: 100%;
-    height: auto;
-    position: relative;
-    /* background-color: rgb(240, 250, 255); */
-}
 
-#slide3>p {
+
+#slide3>p,
+#slide4>p,
+#main_event div p {
     margin-top: 15%;
     padding-left: 16px;
     font-weight: bolder;
@@ -158,17 +155,6 @@ border-radius: 50% ;
 }
 
 /* slide4 스크롤 이미지 */
-#slide4 {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-#slide4>p {
-    margin-top: 15%;
-    padding-left: 16px;
-    font-weight: bolder;
-}
 
 .md_slide {
     width: 100%;
@@ -210,3 +196,14 @@ border-radius: 50% ;
     font-weight: 600;
 }
 
+/* main_event  이미지 */
+#main_event div{
+    width: 100%;
+    /* height: auto; */
+}
+
+#main_event img{
+    width: 100%;
+    margin: 2% 0 0 0;
+    
+}

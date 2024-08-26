@@ -161,12 +161,15 @@ $(document).ready(function() {
     await includeHTML(urlToInclude, targetSelector);
   });
 
+  $('.user').click(async function() {
+    const urlToInclude = 'index/login.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+  });
+
   // 페이지 로딩 시 main.html을 로드
   const initialUrlToInclude = 'index/main.html';
   const initialTargetSelector = '#mainContent';
   includeHTML(initialUrlToInclude, initialTargetSelector);
-
-
-
 
 });
