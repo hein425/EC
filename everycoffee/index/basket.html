@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>함께하는 커피숍 - Mingle J</title>
-</head>
+    <!-- 기본 설정 -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../css/index.css">
 
+    <script src="js/basket.js" defer></script>
+    <link rel="stylesheet" href="../css/basket.css">
+
+    <title>EVERY COFFEE basket</title>
+</head>
 <body>
-    <!-- <article style="width: 100%; height: 250px; background-image: url(img/basket/asdf.webp);  background-size: 100% auto  ;">
+    <section id="wrapper">
+        <header>
+            <div class="header_top">
+                <ul class="my_page">
+                    <li><a href="#">
+                            <i class="fi fi-rs-bell"></i>
+                        </a></li>
+                    <li><a href="#">
+                            <i class="fi fi-rr-barcode"></i></i>
+                        </a></li>
+                </ul>
+                <h2 class="logo"><a href="index.html"><img src="img/main/EveryCoffeeLogo.png" alt=""></a></h2>
+                <ul>
+                    <li><a href="#">
+                            <i class="fi fi-rr-search"></i>
+                        </a></li>
+
+                    <li><a href="basket.html">
+                            <i class="fi fi-rr-shopping-cart"></i>
+                        </a></li>
+                </ul>
+            </div>
+            <ul class="gnb">
+                <li><a href="detail_page.html">커피</a></li>
+                <li><a href="detail_page.html">에이드</a></li>
+                <li><a href="detail_page.html">스무디</a></li>
+                <li><a href="detail_page.html">티</a></li>
+                <li><a href="detail_page.html">디저트</a></li>
+                <li><a href="detail_page.html">MD</a></li>
+            </ul>
+        </header>
+
+
+        <!-- <article id="slide" class="slick">
+             주의사항 여기에 들어가는 이미지는 이미지파일 자차로 봤을때 
+             동일한 크기를 가지고 있어야합니다. 
+            <div>
+                <img src="img/01.jpg" alt="">
+                <p>여기에는 텍스트가 있지용!</p>
+            </div>
+            <div>
+                <img src="img/02.jpg" alt="">
+                <p>여기에는 텍스트가 있지용!</p>
+            </div>
+            <div>
+                <img src="img/03.jpg" alt="">
+                <p>여기에는 텍스트가 있지용!</p>
+            </div>
+        </article> -->
+
+        <!-- <article style="width: 100%; height: 250px; background-image: url(img/basket/asdf.webp);  background-size: 100% auto  ;">
             <div class="search_back">
                 <div class="search_centre">
                     <div class="search-container">
@@ -20,85 +76,142 @@
                         </form>
                     </div>
                 </div>
-            </div> 
-    </article>-->
+            </div> -->
+         
 
-    <article style="width: 100%; height: 100%;">
-        <div class="select-cancel">
-            <div class="kxkx1">
-                <h3><input type="checkbox" id="select-all"> 전체 선택</h3>
-            </div>
-            <div class="kxkx2">
-                <a href="#" class="cancel-btn">
-                    삭제
-                </a>
-            </div>
-        </div>
 
-        <div class="cart_back">
-            <input type="checkbox" id="select" class="select">
-            <div class="cart-item">
-                <img src="img/basket/coffe.png" alt="상품 이미지">
-                <div class="item-details">
-                    <h3>아메리카노(ICE)</h3>
-                    <p>1 잔</p>
-                    <p>블루마운틴 </p>
-                    <p>그랑데</p>
-                    <p>얼음 min</p>
-                    <p>샷추가 +0</p>
-                    <p class="item-price">₩10,000</p>
+        </article>
+
+        <article style="width: 100%; height: 100%;">
+
+            <div class="select-cancel">
+                <div class="kxkx1">
+                                
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="select-all" >
+                        <span class="checkmark"></span>전체선택
+                    </label> 
+
                 </div>
-            </div>
 
-            <input type="checkbox" id="select" class="select">
-            <div class="cart-item">
-                <img src="img/basket/tea.png" alt="상품 이미지">
-                <div class="item-details">
-                    <h3>밀크티</h3>
-                    <p>1 잔</p>
-                    <p>아쌈 CTC</p>
-                    <p>그랑데</p>
-                    <p>얼음 min</p>
-                    <p class="item-price">₩10,000</p>
+                <div class="kxkx2">
+                    <a href="" class="cancel-btn">
+                        삭제
+                    </a>
                 </div>
-            </div>
+             </div>
 
-            <input type="checkbox" id="select" class="select">
-            <div class="cart-item">
-                <img src="img/basket/cake.png" alt="상품 이미지">
-                <div class="item-details">
-                    <h3>자허토르테</h3>
-                    <p>2 조각</p>
-                    <p>-</p>
-                    <p>-</p>
-                    <p class="item-price">₩20,000</p>
+            <div class="cart_back">
+
+            <!-- asdf -->
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select1" class="select">
+                    <span class="checkmark"></span>
+                </label>                
+
+            <!-- asdf -->
+
+                
+                <div class="cart-item">
+                    <img src="img/basket/coffe.png" alt="상품 이미지">
+                    <div class="item-details">
+                        <h3>아메리카노(ICE)</h3>
+                        <p>1 잔</p>
+                        <p>블루마운틴 </p>
+                        <p>그랑데</p>
+                        <p>얼음 min</p>
+                        <p>샷추가 +0</p>
+                        <p class="item-price">₩10,000</p>
+                    </div>
                 </div>
+
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select2" class="select">
+                    <span class="checkmark"></span>
+                </label> 
+                
+                <div class="cart-item">
+                    <img src="img/basket/tea.png" alt="상품 이미지">
+                    <div class="item-details">
+                        <h3>밀크티</h3>
+                        <p>1 잔</p>
+                        <p>아쌈 CTC</p>
+                        <p>그랑데</p>
+                        <p>얼음 min</p>
+                        <p class="item-price">₩10,000</p>
+                    </div>
+                </div>
+
+
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="select3" class="select">
+                    <span class="checkmark"></span>
+                </label> 
+
+                <div class="cart-item">
+                    <img src="img/basket/cake.png" alt="상품 이미지">
+                    <div class="item-details">
+                        <h3>자허토르테</h3>
+                        <p>2 조각</p>
+                        <p>-</p>
+                        <p>-</p>
+                        <p class="item-price">₩20,000</p>
+                    </div>
+                </div>         
             </div>
-            <!-- <div class="total">
-                    총합: ₩40,000
-                </div> -->
 
-        </div>
-        <a href="" class="check-btn">결제하기</a>
+            <div class="excharge">
+                <div><a href="../everycoffee/detail_page.html" class="plus-btn">+메뉴 추가</a></div>
+                <div>결제예정금액: ₩40000</div>
+            </div>
+
+            <a href="../index/charge.html" class="check-btn">결제하기</a>
+            
 
 
-    </article>
-    <!-- <article style="width: 100%; height: 500px; background-color: rgb(99, 49, 96);"></article>   -->
-    <!-- <article style="width: 100%; height: 500px; background-color: rgb(109, 173, 25);"></article>   -->
+        </article>  
+        <!-- <article style="width: 100%; height: 500px; background-color: rgb(99, 49, 96);"></article>   -->
+        <!-- <article style="width: 100%; height: 500px; background-color: rgb(109, 173, 25);"></article>   -->
 
+        <footer>
+            <ul class="footer_gnb">
+                <li><a href="index.html"><i class="fi fi-rr-home"></i><br>HOME</a></li>
+                <li><a href="#"><i class="fi fi-rr-reservation-smartphone"></i><br>ORDER</a></li>
+                <li><a href="#"><i class="fi fi-rr-party-horn"></i><br>EVENT</a></li>
+                <li><a href="#"><i class="fi fi-rr-user"></i><br>MY PAGE</a></li>
+            </ul>
+        </footer>
+    </section>
 </body>
 
-<script>
-    // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
-    document.getElementById('select-all').addEventListener('change', function () {
-        // 모든 슬레이브 체크박스를 선택
-        const slaveCheckboxes = document.querySelectorAll('.select');
 
-        // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
-        slaveCheckboxes.forEach(function (checkbox) {
-            checkbox.checked = document.getElementById('select-all').checked;
+ <script>
+        // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
+        document.getElementById('select-all').addEventListener('change', function() {
+            // 모든 슬레이브 체크박스를 선택
+            const slaveCheckboxes = document.querySelectorAll('.select');
+            
+            // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
+            slaveCheckboxes.forEach(function(checkbox) {
+                checkbox.checked = document.getElementById('select-all').checked;
+            });
         });
-    });
-</script>
+
+        document.querySelectorAll('.cart-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const checkboxId = this.getAttribute('select1');
+            const checkbox = document.getElementById('select1');
+            checkbox.checked = !checkbox.checked; 
+        });
+    }); // 밑에 사진들은 어케 적용되는지 모르겟음....
+
+    
+    
+ </script>
+
+
 
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/membership1.css">
+</head>
+<body>
+    <div class="container">
+        <h2 style="color:rgb(65, 65, 65);">회원가입</h2>
+        <p>mingleJ 에 가입하시려면 약관에 동의해 주세요</p>
+        <form>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="all-agree"> 약관 전체 동의하기(선택 동의 포함)
+                </label>
+                <label>
+                    <input type="checkbox" class="required" id="age"> 만 14세 이상입니다. (필수)
+                </label>
+                <label>
+                    <input type="checkbox" class="required" id="terms"> mingleJ 이용 약관 (필수)
+                </label>
+                <div class="details" id="terms-details">자세히</div>
+                <label>
+                    <input type="checkbox" id="ads"> 광고성 정보 수신 동의 (선택)
+                </label>
+                <div class="details" id="ads-details">자세히</div>
+                <label>
+                    <input type="checkbox" id="marketing"> 마케팅 목적의 개인정보 수집 및 이용 동의 (선택)
+                </label>
+                <div class="details" id="marketing-details">자세히</div>
+            </div>
+            <!-- 가입버튼 -->
+            <button type="button" class="submit-btn" id="submit-btn" 
+                disabled onclick="location.href='membership2.html'">
+                동의하고 가입하기
+            </button>
+        </form>
+        <p style="font-size: 12px; color: #555;">
+            정보주체의 개인정보 및 권리 보호를 위해 '개인정보 보호법', 및 관계 법령이 정한 바를 준수하여 안전하게 관리하고 있습니다.
+            자세한 사항은 <a href="#" style="color: deepskyblue;">개인정보처리방침</a>에서 확인할 수 있습니다.
+        </p>
+    </div>
+
+    <!-- 모달 + 이스터에그 -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="termsClose">&times;</span>
+            <h2>mingleJ 이용 약관</h2>   
+            <p>그대 나의 작은 심장에 귀 기울일 때에<br>
+                입을 꼭 맞추어 내 숨을 가져가도 돼요<br>
+                영롱한 달빛에 괴롭히는 꿈<br>
+                네 눈을 닮은 사랑 그 안에 지는 계절<br>
+                파도보다 더 거칠게 내리치는<br>
+                오 그대여 부서지지마<br>
+                바람새는 창틀에 넌 추워지지마<br>
+                이리와 나를 꼭 안자<br>
+                오늘을 살아내고 우리 내일로 가자<br>
+                내가 너의 작은 심장에 귀 기울일 때에<br>
+                입을 꼭 맞추어 어제에 도착했습니다<br>
+                오 그대여 부서지지마<br>
+                바람새는 창틀에 넌 추워지지마<br>
+                이리와 나를 꼭 안자<br>
+                오늘을 살아내고 우리 내일로 가자<br>
+                그대여 부서지지마<br>
+                바람새는 창틀에 넌 추워지지마<br>
+                이리와 나를 꼭 안자<br>
+                오늘을 살아내고 우리 내일로 가자</p>
+        </div>
+    </div>
+
+    <div id="adsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="adsClose">&times;</span>
+            <h2>광고성 정보 수신 동의</h2>
+            <p>One! Two! Q! W! E! R!<br>
+
+                어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
+                근데 오늘도 천 번 하고 한 번 더 고민 중<br>
+                
+                막상 네 앞에 서니 꽁꽁 얼어버렸다
+                숨겨왔던 나의 맘 절반의 반도 주지를 못했어<br>
+                
+                아, 아, 아직은
+                준비가 안됐다구요
+                소용돌이쳐 어지럽다구<br>
+                
+                쏟아지는 맘을 멈출 수가 없을까?
+                너의 작은 인사 한마디에 요란해져서<br>
+                네 맘의 비밀번호 눌러 열고 싶지만
+                너를 고민고민해도 좋은 걸 어쩌니<br>
+                
+                거울 앞에서 새벽까지 연습한 인사가
+                손을 들고 웃는 얼굴을 하고서 고개를 숙였다<br>
+                
+                아, 아, 아직도 준비가 안됐나 봐요
+                소용돌이쳐 어지럽다구<br>
+                
+                쏟아지는 맘을 멈출 수가 없을까?
+                너의 작은 인사 한마디에 요란해져서<br>
+                네 맘의 비밀번호 눌러 열고 싶지만
+                너를 고민고민해도 좋은 걸<br>
+                
+                이러지도 저러지도 못하는데
+                속이 왈칵 뒤집히고<br>
+                이쯤 왔으면 눈치 챙겨야지
+                날 봐달라구요!<br>
+                
+                좋아한다 너를 좋아한다 좋아해<br>
+                
+                너를 많이 많이 좋아한단 말이야
+                벅차오르다 못해 내 맘이 쿡쿡 아려와<br>
+                두 번은 말 못 해 너 지금 잘 들어봐
+                매일 고민하고 연습했던 말<br>
+                좋아해</p>
+                     
+           
+        </div>
+    </div>
+
+    <div id="marketingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="marketingClose">&times;</span>
+            <h2>마케팅 목적의 개인정보 수집 및 이용 동의</h2>
+            <p>어떤가요
+                우리 같이 떠나요<br>
+                언덕 너머
+                해가 지면은<br>
+                늦을지도 몰라요
+                어서 내게 말해줘<br>
+                
+                바다건너
+                꿈에서만 그리던<br>
+                하루종일
+                해가 떠있는<br>
+                돛단배도 타구요
+                물장구도 치구요<br>
+                
+                그댈 위해 마차를 준비했지<br>
+                마차 타고 꿈나라로 떠나볼까<br>
+                꿈나라는 별보다 따뜻하대<br>
+                별나라는 다음번에 가도록해<br>
+                
+                뒷동산에
+                지저귀던 새들도<br>
+                이미 벌써
+                거기 있어요<br>
+                보고싶은 얼굴들
+                그곳에서 만나요<br>
+                
+                그댈 위해 마차를 준비했지<br>
+                마차 타고 꿈나라로 떠나볼까<br>
+                꿈나라는 별보다 따뜻하대<br>
+                별나라는 다음번에 가도록해<br>
+                
+                그댈 위해 마차를 준비했지<br>
+                마차 타고 꿈나라로 떠나볼까<br>
+                꿈나라는 별보다 따뜻하대<br>
+                별나라는 다음번에 가도록해</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const requiredCheckboxes = document.querySelectorAll('.required');
+    const submitButton = document.getElementById('submit-btn');
+
+    requiredCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            let allChecked = true;
+            requiredCheckboxes.forEach(box => {
+                if (!box.checked) {
+                    allChecked = false;
+                }
+            });
+            if (allChecked) {
+                submitButton.disabled = false;
+                submitButton.classList.add('active');
+            } else {
+                submitButton.disabled = true;
+                submitButton.classList.remove('active');
+            }
+        });
+    });
+
+    // 전체 동의하기체크박스 선택/해제
+    const allAgreeCheckbox = document.getElementById('all-agree');
+    allAgreeCheckbox.addEventListener('change', () => {
+        const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+        allCheckboxes.forEach(checkbox => {
+            checkbox.checked = allAgreeCheckbox.checked;
+        });
+
+        // 필수 항목 체크에 따른 버튼 활성화
+        let allChecked = true;
+        requiredCheckboxes.forEach(box => {
+            if (!box.checked) {
+                allChecked = false;
+            }
+        });
+        if (allChecked) {
+            submitButton.disabled = false;
+            submitButton.classList.add('active');
+        } else {
+            submitButton.disabled = true;
+            submitButton.classList.remove('active');
+        }
+    });
+
+    // 모달 
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    document.getElementById('terms-details').addEventListener('click', () => openModal('termsModal'));
+    document.getElementById('ads-details').addEventListener('click', () => openModal('adsModal'));
+    document.getElementById('marketing-details').addEventListener('click', () => openModal('marketingModal'));
+
+    document.getElementById('termsClose').addEventListener('click', () => closeModal('termsModal'));
+    document.getElementById('adsClose').addEventListener('click', () => closeModal('adsModal'));
+    document.getElementById('marketingClose').addEventListener('click', () => closeModal('marketingModal'));
+
+    // 모달 밖 눌러서 닫기
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target.id);
+        }
+    });
+
+</script>
+
+
+</html>
