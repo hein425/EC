@@ -4,7 +4,9 @@
     --color-03: rgb(218, 192, 163);
     --color-04: rgb(16, 44, 87);
 }
+
 #member {
+    position: relative;
     width: 100%;
     height: 83vh;
     background-color: rgb(248, 240, 229, 0.5);
@@ -21,7 +23,7 @@
 /* ------로그인------ */
 .loginCont {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .loginCont input {
@@ -29,6 +31,10 @@
     border-radius: 3px;
 }
 
+/* .stemp{
+    text-align: right;
+    color: #929292;
+    } */
 .loginFields {
     display: flex;
     flex-direction: column;
@@ -51,7 +57,7 @@
     background-color: var(--color-04);
     color: var(--color-01);
     border-radius: 5px;
-    border : none;
+    border: none;
 }
 
 /* -------로그인 선택사항------ */
@@ -59,28 +65,31 @@ li label {
     margin-right: 5%;
     font-size: small;
 }
+
 li input {
     margin-right: 1%;
 }
 
-#autologin{
+#autologin {
     position: relative;
 }
+
 .autologin-text {
     display: none;
-    position: fixed;
-    width: calc(600px * 0.7);
-    top: 40%;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: calc(100%+0.1%);
     left: 50%;
+    transition: all 1s ease;
 }
 
 #autologin:checked+.autologin-text {
-    display: inline-block;
+    display: inline;
     padding: 1%;
     font-size: smaller;
     background-color: #eee;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, 90%);
 }
 
 /* -----소셜 로그인----- */
@@ -94,27 +103,37 @@ li input {
     display: inline-block;
     padding: 0 30%;
     max-width: 100%;
-    font-size:small;
+    font-size: small;
 }
 
 .another-login p::before,
 .another-login p::after {
-    content: "";    /* 가상 요소에 내용 없음 */
-    position: absolute;    /* 부모 요소에 대해 절대 위치 설정 */
-    top: 50%;    /* 수직 중앙 정렬 */
-    width: 30%;    /* 선의 길이, 너비의 45%로 설정 */
-    height: 0.5px;    /* 선의 두께 */
-    background-color: #929292;    /* 선의 색상 */
+    content: "";
+    /* 가상 요소에 내용 없음 */
+    position: absolute;
+    /* 부모 요소에 대해 절대 위치 설정 */
+    top: 50%;
+    /* 수직 중앙 정렬 */
+    width: 30%;
+    /* 선의 길이, 너비의 45%로 설정 */
+    height: 0.5px;
+    /* 선의 두께 */
+    background-color: #929292;
+    /* 선의 색상 */
 }
 
 .another-login p::before {
-    left: 0;    /* 왼쪽에 위치 */
-    transform: translateY(-30%);    /* 수직 중앙 정렬 */
+    left: 0;
+    /* 왼쪽에 위치 */
+    transform: translateY(-30%);
+    /* 수직 중앙 정렬 */
 }
 
 .another-login p::after {
-    right: 0;    /* 오른쪽에 위치 */
-    transform: translateY(-30%);    /* 수직 중앙 정렬 */
+    right: 0;
+    /* 오른쪽에 위치 */
+    transform: translateY(-30%);
+    /* 수직 중앙 정렬 */
 }
 
 .another-login li {
@@ -134,17 +153,23 @@ li input {
 .join {
     margin: 20% 0 5% 0;
 }
-.join a{
+
+.join a {
     color: var(--color-04);
     font-weight: 600;
 }
-.join, .idpw-find{
-text-align: center;
+
+.join,
+.idpw-find {
+    text-align: center;
 }
-.idpw-find{
+
+.idpw-find {
     margin-bottom: 5%;
     font-size: small;
 }
-.idpw-find a, span{
+
+.idpw-find a,
+span {
     color: #929292;
 }

@@ -64,7 +64,7 @@
     color: #102c57;
   }
   
-  input[type="text"] {
+  /* input[type="text"] {
     width: 60%;
     max-width: 500px;
     padding: 10px;
@@ -85,7 +85,7 @@
   
   input[type="submit"]:hover {
     background-color: rgb(10, 10, 48);
-  }
+  } */
 
  /* 카트 창 설정 */
 
