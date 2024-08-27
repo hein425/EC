@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFpop</title>
+    <title>Every Coffee CFpop</title>
     <link rel="stylesheet" href="../css/pop.css">
 </head>
 <body>
@@ -13,31 +13,32 @@
         <P style="text-align: center;" >아메리카노</P>
         <form>
             <div class="form-group">
-                <label for="bean-type">beans</label>
+                <label for="bean-type">Beans</label>
                 <select id="bean-type" name="bean-type">
-                    <option value="ethiopia">에티오피아</option>
-                    <option value="Blue Mountain">블루마운틴</option>
-                    <option value="Kona">코나</option>
-                    <option value="Signature">시그니처블렌드</option>
-                    <option value="Signature">[디카페인]</option>
+                    <option value="ethiopia">에티오피아(Ethiopian)</option>
+                    <option value="Blue Mountain">블루마운틴(Blue Mountain)</option>
+                    <option value="Kona">코나(Kona)</option>
+                    <option value="Signature" selected>시그니처블렌드(Signature Blend)</option>
+                    <option value="Signature">[디카페인(Decaffeinated)]</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="size">size</label>
+                <label for="size">Size</label>
                 <select id="size" name="size">
-                    <option value="short">숏</option>
-                    <option value="grande">그랑데</option>
-                    <option value="venti">벤티</option>
+                    <option value="short">Short(240ml)</option>
+                    <option value="short">Tall(355ml)</option>
+                    <option value="grande" selected>Grande(475ml)</option>
+                    <option value="venti">Venti(590ml)</option>
                 </select>
             </div>
             <div class="form-group">
               <label for="tem"></label>
               <label>
-                <input type="checkbox" id="hot" name="option" value="hot">
+                <input type="radio" id="hot" name="option" value="hot">
                 hot
               </label>
               <label>
-                <input type="checkbox" id="ice" name="option" value="ice">
+                <input type="radio" id="ice" name="option" value="ice">
                 ice (amount)
               </label>
               <div class="slider-container" id="ice-slider-container">
@@ -70,13 +71,12 @@
                 </div>
             </div>    
             <div class="form-group">
-                <input type="button" value="0000원 담기" onclick="window.location.href='basket.html'">
+                <input type="button" value="0000원 담기" onclick="javascript:history.back()">
             </div>
         </form>
     </div>
 </body>
 
-<!-- 복붙함 ㅈㅅㅎㅎ -->
 <script>    
   document.getElementById('ice').addEventListener('change', function() {
       const iceSliderContainer = document.getElementById('ice-slider-container');

@@ -94,7 +94,7 @@ header {
     margin-right: 15px;
 }
 .header_top ul li i {
-    color: #000;
+    color: #575757;
     font-size: 18px;
 }
 .bk{
@@ -293,7 +293,7 @@ footer>div{
 }
 .footer_gnb li a {
     color: #000;
-    line-height: 0;
+    line-height: 1.0;
 }
 .footer_gnb li i {
     color: #575757;

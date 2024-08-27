@@ -32,9 +32,19 @@
   gap: 15px 5px;
   font-size: 13px;
 }
+.product li:nth-child(3n-1){
+  border-right: 1px dotted var(--color-main-beige02);
+  border-left: 1px dotted var(--color-main-beige02);
+  }
+.product li:nth-child(3n){
+  }
+.product li:nth-child(n-3){
+border-bottom: 1px dotted var(--color-main-beige02);
+}
 .product li{
   text-align: center;
-  background-color: rgb(245, 250, 255);
+  /* background-color: rgb(248, 240, 229,0.3); */
+  /* border-bottom: 1px dotted var(--color-main-beige01); */
   box-sizing: border-box;
   padding: 10px 0;
   cursor: pointer;

@@ -135,10 +135,6 @@
     text-align: left;
   }
   
-  h3 {
-    color: #555;
-  }
-  
   .cart-item {
     display: flex;
     justify-content: space-between;

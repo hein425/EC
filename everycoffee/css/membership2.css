@@ -6,27 +6,37 @@
         font-weight: 400;
         font-style: normal;
         }
-    
+
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f7f7f7;
+            height: 100vh;
+        }
+        .container>a>img{
+            display: flex;
+            margin: 3% auto;
+            width: 40%;
         }
         .container {
             max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
+            margin: 0 auto ;
+            padding: 0% 5% 3% 5%;
+            background-color: rgb(248, 240, 229,0.5);
             border: 1px solid #ddd;
             border-radius: 8px;
         }
-        h2 {
-            margin-bottom: 20px;
+
+       .container-h2{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 15px auto 20px;
+            
         }
         label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: bold;
         }
         input[type="text"], input[type="email"], input[type="password"] {
@@ -37,16 +47,30 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
-        .submit-btn {
+
+        /* 버튼부분 */
+        .membership2-submit-btn{
             width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .submit-btn {
+            margin-top: 85%;
             padding: 10px;
-            background-color: #102c57;
             border: none;
             border-radius: 5px;
             color: white;
             cursor: pointer;
-            text-align: center;
         }
-        .submit-btn:hover {
-            background-color:#061122;
+        .membership2-submit-btn>button:nth-child(1){
+            width: 15%;
+            background-color: rgb(234, 219, 200, 0.5);
+            color: #575757;
+        }
+        .membership2-submit-btn>button:nth-child(2){
+            width: 82%;
+            background-color: #102c57;
+            font-weight: 600;
         }

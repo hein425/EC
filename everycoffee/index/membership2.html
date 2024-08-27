@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/membership2.css">
+    <title>Every Coffee Membership2</title>
+    <link rel="stylesheet" href="../css/membership2.css">
 </head>
+
 <body>
     <div class="container">
-        <h2 style="color:rgb(65, 65, 65);">회원가입</h2>
+        <a href="../index.html"><img src="../img/main/EveryCoffeeLogo.png" alt=""></a>
+        <h2 class="container-h2">회원가입</h2>
         <form action="membership3.html" method="post">
-            <label for="username" style="color:rgb(65, 65, 65);">사용자 이름</label>
-            <input type="text" id="username" name="username" required>
+            <label for="username">이름</label>
+            <input type="text" id="username" name="username" placeholder="name" required>
 
-            <label for="email" style="color:rgb(65, 65, 65);">이메일</label>
-            <input type="email" id="email" name="email" required>
+            <label for="username">닉네임</label>
+            <input type="text" id="nickname" name="nickname" placeholder="nickname" required>
 
-            <label for="password" style="color:rgb(65, 65, 65);">비밀번호</label>
-            <input type="password" id="password" name="password" required>
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" placeholder="password" required>
 
-            <label for="confirm-password" style="color:rgb(65, 65, 65);">비밀번호 확인</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="confirm-password">비밀번호 확인</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm password"
+                required>
 
-            <button type="submit" class="submit-btn" onclick = "location.href = 'membership3' ">가입하기</button>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="e-mail" required>
+
+            <div class="membership2-submit-btn">
+                <button type="submit" class="submit-btn" onclick="goBack()">이전</button>
+                <button type="submit" class="submit-btn" onclick="location.href = 'membership3.html' ">가입하기</button>
+            </div>
         </form>
     </div>
+    <script>
+        function goBack() {
+            if (window.history.length > 2) {
+                window.history.go(-2);
+            } else {
+                alert('이전 페이지가 존재하지 않습니다.');
+            }
+        }
+    </script>
 </body>
+
 </html>

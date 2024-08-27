@@ -355,7 +355,9 @@ a{
     font-size: 15px;
     color: #7A7A7A;
 }
-
+#guide span{
+    color: #7A7A7A;
+}
 
 /* 미디어쿼리 구간 ##################################################### */
 @media screen and (max-width: 600px) {
