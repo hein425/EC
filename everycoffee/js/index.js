@@ -155,10 +155,34 @@ $(document).ready(function() {
     await includeHTML(urlToInclude, targetSelector);
   });
 
+  $('.order-btn').click(async function() {
+    const urlToInclude = 'index/charge.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+  });
+
   $('.bk').click(async function() {
     const urlToInclude = 'index/basket.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+        // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
+        document.getElementById('select-all').addEventListener('change', function () {
+          // 모든 슬레이브 체크박스를 선택
+          const slaveCheckboxes = document.querySelectorAll('.select');
+  
+          // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
+          slaveCheckboxes.forEach(function (checkbox) {
+              checkbox.checked = document.getElementById('select-all').checked;
+          });
+      });
+      document.querySelectorAll('.cart-item').forEach(item => {
+          item.addEventListener('click', function () {
+              const checkboxId = this.getAttribute('select1');
+              const checkbox = document.getElementById('select1');
+              checkbox.checked = !checkbox.checked;
+          });
+      });
+  
   });
 
   $('.user').click(async function() {
@@ -169,14 +193,10 @@ $(document).ready(function() {
     document.querySelector('.login-btn').addEventListener('click', function (event) {
       event.preventDefault();
       const login = document.getElementsByClassName('login-id');
-      if(login.value==null){
-        alert('아이디를 입력하세요');
-        return;
-      }
-      else{
+
         window.location.href = 'index/mypage.html';
         
-      }
+      
     });
   });
 

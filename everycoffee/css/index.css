@@ -245,7 +245,8 @@ li button {}
     font-size: 0.7rem;
     line-height: 1.7;
     padding: 2.5%;
-    margin: 55px 0;
+    margin-bottom: 55px;
+    margin-top: 10px;
     background-color: #eeeeee;
 }
 #information p{
@@ -253,6 +254,7 @@ li button {}
     font-size: 9px;
     color: #2e2e2e;
     margin-left: 2%;
+    background-color:rgba(0 , 0, 0, 0);
 }
 
 /* footer 설정 */

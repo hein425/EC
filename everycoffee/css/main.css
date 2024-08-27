@@ -197,13 +197,17 @@ border-radius: 50% ;
 }
 
 /* main_event  이미지 */
+
 #main_event div{
     width: 100%;
     /* height: auto; */
 }
 
+#main_event>div>div:nth-child(3){
+margin-bottom: 5%;
+}
+
 #main_event img{
     width: 100%;
-    margin: 2% 0 0 0;
-    
+    margin: 2% 0 0% 0;
 }

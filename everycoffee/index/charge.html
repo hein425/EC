@@ -3,48 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 기본 설정 -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-straight/css/uicons-regular-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="stylesheet" href="/css/index.css">
-
-    <!-- <script src="js/basket.js" defer></script> -->
-    <link rel="stylesheet" href="/css/charge.css">
 
     <title> Charge </title>
 </head>
 <body>
-    <section id="wrapper">
-        <header>
-            <div class="header_top">
-                <ul class="my_page">
-                    <li><a href="#">
-                            <i class="fi fi-rs-bell"></i>
-                        </a></li>
-                    <li><a href="#">
-                            <i class="fi fi-rr-barcode"></i></i>
-                        </a></li>
-                </ul>
-                <h2 class="logo"><a href="index.html"><img src="img/main/EveryCoffeeLogo.png" alt=""></a></h2>
-                <ul>
-                    <li><a href="#">
-                            <i class="fi fi-rr-search"></i>
-                        </a></li>
-
-                    <li><a href="basket.html">
-                            <i class="fi fi-rr-shopping-cart"></i>
-                        </a></li>
-                </ul>
-            </div>
-            <ul class="gnb">
-                <li><a href="detail_page.html">커피</a></li>
-                <li><a href="detail_page.html">에이드</a></li>
-                <li><a href="detail_page.html">스무디</a></li>
-                <li><a href="detail_page.html">티</a></li>
-                <li><a href="detail_page.html">디저트</a></li>
-                <li><a href="detail_page.html">MD</a></li>
-            </ul>
-        </header>
 
         <!-- 주소검색 -->
         <article style="width: 100%; height: 250px; background-size: 100% auto; " >
@@ -54,8 +16,8 @@
                         <h2>" 어디로 <a class="bedal">전달</a>해 드릴까요? "</h2>
                         <h5> 배달 받으실 동 이름으로 검색해주세요</h5>
                         <form action="https://www.google.co.kr/maps/place/%EA%B7%B8%EB%A6%B0%EC%BB%B4%ED%93%A8%ED%84%B0%EC%95%84%ED%8A%B8%ED%95%99%EC%9B%90+%EB%8C%80%EA%B5%AC%EC%BA%A0%ED%8D%BC%EC%8A%A4/data=!3m1!4b1!4m6!3m5!1s0x3565e3c3dd62828f:0xb36b33bf2f38782a!8m2!3d35.8683476!4d128.5940482!16s%2Fg%2F1tf67y21?hl=ko&entry=ttu" method="get">
-                            <input type="text" name="address" placeholder="주소를 입력하세요" required>
-                            <input type="submit" value="검색">
+                            <input type="text" name="address" class="charge_submit-text" placeholder="주소를 입력하세요" required>
+                            <input type="submit" class="charge_submit" value="검색">
                         </form>
                     </div>
                 </div>
@@ -69,6 +31,7 @@
                 <h2>사장님께</h2>
                 <p>요청사항없음</p>
                </div>
+               <div class="to-sajang-line"></div>
                <div class="to-rider">
                 <h2>라이더님께</h2>
                 <p>문앞에 두고 벨 눌러주세요</p>
@@ -129,12 +92,12 @@
                 <div class="radio-container">
                     <div class="radio-item">
                         <input type="radio" name="options" id="option1">
-                        <img src="../everycoffee/img/charge/logo-finance-toss.png" alt="option1 Image">
+                        <img src="img/charge/logo-finance-toss.png" alt="option1 Image">
                         <label for="option1">토스 페이</label>
                     </div>
                     <div class="radio-item">
                         <input type="radio" name="options" id="option2">
-                        <img src="../everycoffee/img/charge/logo-finance-kakaopay.png" alt="option1 Image">
+                        <img src="img/charge/logo-finance-kakaopay.png" alt="option1 Image">
                         <label for="option2">카카오 페이</label>
                     </div>
                     <div class="radio-item">
@@ -210,17 +173,7 @@
 
         <!-- 결제버튼 -->
 
-        <!-- 뿌타 -->
-        <footer>
-            <ul class="footer_gnb">
-                <li><a href="index.html"><i class="fi fi-rr-home"></i><br>HOME</a></li>
-                <li><a href="#"><i class="fi fi-rr-reservation-smartphone"></i><br>ORDER</a></li>
-                <li><a href="#"><i class="fi fi-rr-party-horn"></i><br>EVENT</a></li>
-                <li><a href="#"><i class="fi fi-rr-user"></i><br>MY PAGE</a></li>
-            </ul>
 
-        </footer>
-    </section>
 </body>
 
 
