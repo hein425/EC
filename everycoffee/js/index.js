@@ -165,6 +165,19 @@ $(document).ready(function() {
     const urlToInclude = 'index/login.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+
+    document.querySelector('.login-btn').addEventListener('click', function (event) {
+      event.preventDefault();
+      const login = document.getElementsByClassName('login-id');
+      if(login.value==null){
+        alert('아이디를 입력하세요');
+        return;
+      }
+      else{
+        window.location.href = 'index/mypage.html';
+        
+      }
+    });
   });
 
   // 페이지 로딩 시 main.html을 로드
