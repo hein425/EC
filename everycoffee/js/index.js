@@ -11,8 +11,9 @@ $(document).ready(function () {
     var width = $(this).outerWidth();
     $('.gnb_line').css("left", leftPos + "px").css("width", width + "px");
   });
-  $('.bk').click(function () {
+  $('.bk, .user, .order-btn').click(function () {
     $('.gnb_line').css({ "width": "0px" });
+    $('.gnb li').removeClass("selected");
   })
 
   // mainContent 로딩 함수
@@ -32,6 +33,8 @@ $(document).ready(function () {
       initializeSlick();
       initializeDragSlide();
       initializeMembershipButton();
+      checkbox();
+      order_modal();
     } catch (error) {
       console.error('Error loading content:', error);
     }
@@ -122,6 +125,48 @@ $(document).ready(function () {
     });
   }
 
+  // 장바구니 체크박스 함수
+  function checkbox() {
+    // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
+    document.getElementById('select-all').addEventListener('change', function () {
+      // 모든 슬레이브 체크박스를 선택
+      const slaveCheckboxes = document.querySelectorAll('.select');
+      // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
+      slaveCheckboxes.forEach(function (checkbox) {
+        checkbox.checked = document.getElementById('select-all').checked;
+      });
+    });
+    document.querySelectorAll('.cart-item').forEach(item => {
+      item.addEventListener('click', function () {
+        const checkboxId = this.getAttribute('select1');
+        const checkbox = document.getElementById('select1');
+        checkbox.checked = !checkbox.checked;
+      });
+    });
+  }  
+
+  // 결제창 모달 함수
+  function order_modal() {
+    document.querySelector('.to-sajang').addEventListener('click', function() {
+        document.getElementById('modal-sajang').style.display = 'block';
+    });
+    document.querySelector('.to-rider').addEventListener('click', function() {
+        document.getElementById('modal-rider').style.display = 'block';
+    });
+    // 모달 닫기
+    document.querySelectorAll('.close').forEach(function(element) {
+        element.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            document.getElementById(target).style.display = 'none';
+        });
+    });
+    // 모달 바깥 클릭 시 닫기
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+  }
 
   // detail_page.html을 로드하는 이벤트 핸들러
   $('.gnb li').eq(0).click(async function () {
@@ -161,30 +206,19 @@ $(document).ready(function () {
     await includeHTML(urlToInclude, targetSelector);
   });
 
+
   $('.bk').click(async function () {
     const urlToInclude = 'index/basket.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
 
-    // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
-    document.getElementById('select-all').addEventListener('change', function () {
-      // 모든 슬레이브 체크박스를 선택
-      const slaveCheckboxes = document.querySelectorAll('.select');
-
-      // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
-      slaveCheckboxes.forEach(function (checkbox) {
-        checkbox.checked = document.getElementById('select-all').checked;
-      });
+    $('.check-btn').click(async function () {
+      const urlToInclude = 'index/charge.html';
+      const targetSelector = '#mainContent';
+      await includeHTML(urlToInclude, targetSelector);
     });
-    document.querySelectorAll('.cart-item').forEach(item => {
-      item.addEventListener('click', function () {
-        const checkboxId = this.getAttribute('select1');
-        const checkbox = document.getElementById('select1');
-        checkbox.checked = !checkbox.checked;
-      });
-    });
-
   });
+
 
   $('.user').click(async function () {
     const urlToInclude = 'index/login.html';
@@ -195,7 +229,6 @@ $(document).ready(function () {
     function loadpage() {
       document.querySelector('#information').style.display = 'none';
     }
-
   });
 
   // 페이지 로딩 시 main.html을 로드

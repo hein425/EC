@@ -169,39 +169,11 @@
             </div>
         </article>  
 
-        <a href="https://finance.naver.com/" class="check-btn">39,000원 결제하기</a>
+        <a href="https://finance.naver.com/" class="check-btn2">39,000원 결제하기</a>
 
         <!-- 결제버튼 -->
-
-
 </body>
 
-
- <script>
- // 모달 열기
-document.querySelector('.to-sajang').addEventListener('click', function() {
-    document.getElementById('modal-sajang').style.display = 'block';
-});
-
-document.querySelector('.to-rider').addEventListener('click', function() {
-    document.getElementById('modal-rider').style.display = 'block';
-});
-
-// 모달 닫기
-document.querySelectorAll('.close').forEach(function(element) {
-    element.addEventListener('click', function() {
-        const target = this.getAttribute('data-target');
-        document.getElementById(target).style.display = 'none';
-    });
-});
-
-// 모달 바깥 클릭 시 닫기
-window.addEventListener('click', function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-});
- </script>
 
 
 

@@ -12,6 +12,7 @@
     padding: 0;
     /* 클릭시 파란 반응 삭제 */
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Pretendard-Regular';
 }
 ul, ol {
     list-style-type: none;
