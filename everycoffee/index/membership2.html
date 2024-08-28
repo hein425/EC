@@ -26,12 +26,15 @@
             <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm password"
                 required>
 
+            <label for="phone">휴대폰번호</label>
+            <input type="phone" id="phone" name="phone" placeholder="phone number" required>
+
             <label for="email">이메일</label>
             <input type="email" id="email" name="email" placeholder="e-mail" required>
 
             <div class="membership2-submit-btn">
                 <button type="submit" class="submit-btn" onclick="goBack()">이전</button>
-                <button type="submit" class="submit-btn" onclick="location.href = 'membership3.html' ">가입하기</button>
+                <button type="submit" class="submit-btn" id="btn" >가입하기</button>
             </div>
         </form>
     </div>
@@ -43,6 +46,23 @@
                 alert('이전 페이지가 존재하지 않습니다.');
             }
         }
+        const btn = document.getElementById('btn');
+        btn.onclick = () => {
+            const username = document.getElementById('username').value.trim();
+            const nickname = document.getElementById('nickname').value.trim();
+            const password = document.getElementById('password').value.trim();
+            // const confirm-password = document.getElementById('confirm-password').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (username === '' || nickname === '' || 
+            password === ''|| phone === '' || email === '') {
+                alert('Please fill in all fields.');
+                return; // 입력 필드가 모두 채워지지 않았을 경우, 페이지 이동을 중단합니다.
+            }
+
+            window.location.href = 'membership3.html';
+        };
     </script>
 </body>
 
