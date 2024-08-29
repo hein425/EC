@@ -41,7 +41,6 @@ $(document).ready(function () {
     }
   }
 
-
   // slick 슬라이더 함수
   function initializeSlick() {
     $('.slick').slick({
@@ -103,7 +102,6 @@ $(document).ready(function () {
       });
     });
   }
-
 
   // 멤버십 다이얼로그 초기화 함수
   function initializeMembershipButton() {
@@ -168,12 +166,13 @@ $(document).ready(function () {
         }
     });
   }
-
-
   
+
+
+
   function loadpage(shouldDisplay) {
     document.querySelector('#information').style.display = shouldDisplay ? 'block' : 'none';
-  }
+  }  
   // detail_page.html을 로드하는 이벤트 핸들러
   $('.gnb li').eq(0).click(async function () {
     const urlToInclude = 'index/main_coffee.html';
@@ -221,7 +220,6 @@ $(document).ready(function () {
     order_modal();
   });
 
-
   $('.bk').click(async function () {
     const urlToInclude = 'index/basket.html';
     const targetSelector = '#mainContent';
@@ -238,7 +236,6 @@ $(document).ready(function () {
     });
   });
 
-
   $('.user').click(async function () {
     const urlToInclude = 'index/login.html';
     const targetSelector = '#mainContent';
@@ -246,11 +243,40 @@ $(document).ready(function () {
     loadpage(false);
   });
 
-  
   // 페이지 로딩 시 main.html을 로드
   const initialUrlToInclude = 'index/main.html';
   const initialTargetSelector = '#mainContent';
   includeHTML(initialUrlToInclude, initialTargetSelector);
   loadpage(true); 
+
+  
+// URL과 타겟 선택자를 매핑한 배열
+const pages = [
+  'index/main_coffee.html',
+  'index/main_ade.html',
+  'index/main_smoothie.html',
+  'index/main_tea.html',
+  'index/main_dessert.html',
+  'index/main_md.html'
+];
+const targetSelector = '#mainContent';
+// 모든 메뉴 항목에 대해 클릭 이벤트 추가
+$('.gnb li').each(function(index) {
+  $(this).click(async function() {
+    const urlToInclude = pages[index];
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true);
+ 
+    // cfpop이미지 불러들여오기
+    const proBoxes = document.querySelectorAll('.pro_box');
+      proBoxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+          const imgSrc = box.querySelector('.pro_img img').src;
+          window.location.href = `./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`;
+        });
+      });
+  });
+});
+
 
 });
