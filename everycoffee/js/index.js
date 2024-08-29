@@ -29,6 +29,7 @@ $(document).ready(function () {
 
       const targetElement = document.querySelector(targetSelector);
       targetElement.innerHTML = doc.body.innerHTML;
+      
       // HTML 로드 후 추가 초기화
       initializeSlick();
       initializeDragSlide();
@@ -168,42 +169,56 @@ $(document).ready(function () {
     });
   }
 
+
+  
+  function loadpage(shouldDisplay) {
+    document.querySelector('#information').style.display = shouldDisplay ? 'block' : 'none';
+  }
   // detail_page.html을 로드하는 이벤트 핸들러
   $('.gnb li').eq(0).click(async function () {
     const urlToInclude = 'index/main_coffee.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
   $('.gnb li').eq(1).click(async function () {
     const urlToInclude = 'index/main_ade.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
   $('.gnb li').eq(2).click(async function () {
     const urlToInclude = 'index/main_smoothie.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
   $('.gnb li').eq(3).click(async function () {
     const urlToInclude = 'index/main_tea.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
   $('.gnb li').eq(4).click(async function () {
     const urlToInclude = 'index/main_dessert.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
   $('.gnb li').eq(5).click(async function () {
     const urlToInclude = 'index/main_md.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
   });
 
   $('.order-btn').click(async function () {
     const urlToInclude = 'index/charge.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+
+    order_modal();
   });
 
 
@@ -211,11 +226,15 @@ $(document).ready(function () {
     const urlToInclude = 'index/basket.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
 
     $('.check-btn').click(async function () {
       const urlToInclude = 'index/charge.html';
       const targetSelector = '#mainContent';
       await includeHTML(urlToInclude, targetSelector);
+      loadpage(true); 
+
+      order_modal();
     });
   });
 
@@ -224,16 +243,14 @@ $(document).ready(function () {
     const urlToInclude = 'index/login.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
-
-    loadpage('index/login.html');
-    function loadpage() {
-      document.querySelector('#information').style.display = 'none';
-    }
+    loadpage(false);
   });
 
+  
   // 페이지 로딩 시 main.html을 로드
   const initialUrlToInclude = 'index/main.html';
   const initialTargetSelector = '#mainContent';
   includeHTML(initialUrlToInclude, initialTargetSelector);
+  loadpage(true); 
 
 });
