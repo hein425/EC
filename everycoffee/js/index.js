@@ -272,7 +272,11 @@ $('.gnb li').each(function(index) {
       proBoxes.forEach(function(box) {
         box.addEventListener('click', function() {
           const imgSrc = box.querySelector('.pro_img img').src;
-          window.location.href = `./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`;
+          // a 링크로 연결
+          // window.location.href = `./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`;
+          
+          // a_blank 링크로 연결
+          window.open(`./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`, '_blank');
         });
       });
   });
