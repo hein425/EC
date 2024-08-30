@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* 배너 */
 #banner img {
@@ -98,8 +104,9 @@ border-radius: 50% ;
 
 .recommendation_name {
     width: 100%;
+    font-family: 'Pretendard-Regular';
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* slide3 스크롤 이미지 */
@@ -150,8 +157,10 @@ border-radius: 50% ;
 
 .bestmenu_name {
     width: 100%;
+    font-family: 'Pretendard-Regular';
+
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* slide4 스크롤 이미지 */
@@ -192,8 +201,9 @@ border-radius: 50% ;
 
 .md_name {
     width: 100%;
+    font-family: 'Pretendard-Regular';
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* main_event  이미지 */

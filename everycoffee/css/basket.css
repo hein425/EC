@@ -14,10 +14,15 @@
 
 .kxkx1{
   width: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
-
 .kxkx2{
-  width: 10%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 } 
 
 .cancel-btn {
@@ -50,7 +55,7 @@
 /* 체크마크 모양 */
 .custom-checkbox .checkmark {
   position: absolute;
-  top: 5px;
+  top: 0;
   left: 0;
   height: 20px;
   width: 20px;
@@ -90,8 +95,8 @@
     background-color: rgba(218, 192, 163, 0.35);
     max-width: 80%;
     height: 50%;
-    margin: 20px 20px;
-    padding:  20px 50px;
+    margin: 0px 20px;
+    padding:  10px 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: left;
@@ -102,24 +107,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
+    box-sizing: border-box;
     border-bottom: 2px solid rgba(218, 192, 163, 0.26);
   }  
-  
   .cart-item:last-child {
     border-bottom: none;
   }  
-  
   .cart-item img {
-    width: 130px;
-    height: 130px;
+    width: 35%;
+    height: auto;
     object-fit: cover;
     border-radius: 4px;
-  }  
+  }
   
   .item-details {
     flex: 1;
-    margin-left: 20%;
+    margin-left: 17%;
     padding: 3% 0;
+    box-sizing: border-box;
   }  
   
   .item-details h3 {
@@ -130,7 +135,20 @@
   .item-details p {
     margin: 5px 0;
     /* color: #000; */
-  }  
+  }
+
+  .details_h2{
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .quantity{
+    width: 15%;
+    padding: 2px;
+    text-align: center;
+    border: 1.8px solid #171718;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
   
   .item-price {
     font-size: 16px;
@@ -144,8 +162,9 @@
  } 
   .plus-btn{
     display: inline-block;
+    color: #102c57;
   }  
-  .check-btn {
+  .check-btn{
     display: inline-block;
     width: 90%;
     margin: 10px 3%;
@@ -155,7 +174,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 4px;
-    
+    cursor: pointer;
   }  
   
   .check-btn:hover {
@@ -163,3 +182,17 @@
   }  
   
 
+/* 미디어쿼리 구간 ##################################################### */
+@media screen and (max-width: 600px) {
+
+  .details_h2{
+    font-size: 15px;
+  }
+  .item-details {
+    margin-left: 6%;
+  }
+  .item-details>p {
+    font-size: 12px;
+  }
+
+}

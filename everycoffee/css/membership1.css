@@ -22,7 +22,9 @@ body {
     border-radius: 8px;
 }
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20spx;
+    width: 100%;
+    text-align: center;
 }
 .checkbox-group {
     margin-bottom: 15px;

@@ -1,5 +1,8 @@
 @charset "ute-8";
-
+a{
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+}
 .top-header {
   border: 1px solid #eee;
   width: 600px;
@@ -41,14 +44,13 @@ input[type="text"] {
 }
 .list-container div{
   float: left;
-  
 }
 .list-container li {
   flex: 1 1 calc(20% - 10px); /* 각 li의 너비 설정 (5개씩) */
   min-width: 100px;
-  text-align: center;
+  text-align: left;
   padding: 0px 20px 10px 0px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .search_01{
   width: 210px;

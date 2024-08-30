@@ -11,8 +11,9 @@ $(document).ready(function () {
     var width = $(this).outerWidth();
     $('.gnb_line').css("left", leftPos + "px").css("width", width + "px");
   });
-  $('.bk').click(function () {
+  $('.bk, .user, .order-btn').click(function () {
     $('.gnb_line').css({ "width": "0px" });
+    $('.gnb li').removeClass("selected");
   })
 
   // mainContent 로딩 함수
@@ -28,15 +29,17 @@ $(document).ready(function () {
 
       const targetElement = document.querySelector(targetSelector);
       targetElement.innerHTML = doc.body.innerHTML;
+      
       // HTML 로드 후 추가 초기화
       initializeSlick();
       initializeDragSlide();
       initializeMembershipButton();
+      // checkbox();
+      // order_modal();
     } catch (error) {
       console.error('Error loading content:', error);
     }
   }
-
 
   // slick 슬라이더 함수
   function initializeSlick() {
@@ -100,7 +103,6 @@ $(document).ready(function () {
     });
   }
 
-
   // 멤버십 다이얼로그 초기화 함수
   function initializeMembershipButton() {
     const openmembershipbutton = document.getElementById("open-membership");
@@ -122,55 +124,12 @@ $(document).ready(function () {
     });
   }
 
-
-  // detail_page.html을 로드하는 이벤트 핸들러
-  $('.gnb li').eq(0).click(async function () {
-    const urlToInclude = 'index/main_coffee.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-  $('.gnb li').eq(1).click(async function () {
-    const urlToInclude = 'index/main_ade.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-  $('.gnb li').eq(2).click(async function () {
-    const urlToInclude = 'index/main_smoothie.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-  $('.gnb li').eq(3).click(async function () {
-    const urlToInclude = 'index/main_tea.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-  $('.gnb li').eq(4).click(async function () {
-    const urlToInclude = 'index/main_dessert.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-  $('.gnb li').eq(5).click(async function () {
-    const urlToInclude = 'index/main_md.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-
-  $('.order-btn').click(async function () {
-    const urlToInclude = 'index/charge.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-  });
-
-  $('.bk').click(async function () {
-    const urlToInclude = 'index/basket.html';
-    const targetSelector = '#mainContent';
-    await includeHTML(urlToInclude, targetSelector);
-
+  // 장바구니 체크박스 함수
+  function checkbox() {
     // 마스터 체크박스를 선택할 때 슬레이브 체크박스들도 함께 선택되거나 해제되도록 하는 함수
     document.getElementById('select-all').addEventListener('change', function () {
       // 모든 슬레이브 체크박스를 선택
       const slaveCheckboxes = document.querySelectorAll('.select');
-
       // 마스터 체크박스의 체크 상태를 모든 슬레이브 체크박스에 적용
       slaveCheckboxes.forEach(function (checkbox) {
         checkbox.checked = document.getElementById('select-all').checked;
@@ -183,24 +142,153 @@ $(document).ready(function () {
         checkbox.checked = !checkbox.checked;
       });
     });
+  }  
 
+  // 결제창 모달 함수
+  function order_modal() {
+    document.querySelector('.to-sajang').addEventListener('click', function() {
+        document.getElementById('modal-sajang').style.display = 'block';
+    });
+    document.querySelector('.to-rider').addEventListener('click', function() {
+        document.getElementById('modal-rider').style.display = 'block';
+    });
+    // 모달 닫기
+    document.querySelectorAll('.close').forEach(function(element) {
+        element.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            document.getElementById(target).style.display = 'none';
+        });
+    });
+    // 모달 바깥 클릭 시 닫기
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+  }
+  
+
+
+
+  function loadpage(shouldDisplay) {
+    document.querySelector('#information').style.display = shouldDisplay ? 'block' : 'none';
+  }  
+  // detail_page.html을 로드하는 이벤트 핸들러
+  $('.gnb li').eq(0).click(async function () {
+    const urlToInclude = 'index/main_coffee.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+  $('.gnb li').eq(1).click(async function () {
+    const urlToInclude = 'index/main_ade.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+  $('.gnb li').eq(2).click(async function () {
+    const urlToInclude = 'index/main_smoothie.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+  $('.gnb li').eq(3).click(async function () {
+    const urlToInclude = 'index/main_tea.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+  $('.gnb li').eq(4).click(async function () {
+    const urlToInclude = 'index/main_dessert.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+  $('.gnb li').eq(5).click(async function () {
+    const urlToInclude = 'index/main_md.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+  });
+
+  $('.order-btn').click(async function () {
+    const urlToInclude = 'index/charge.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+
+    order_modal();
+  });
+
+  $('.bk').click(async function () {
+    const urlToInclude = 'index/basket.html';
+    const targetSelector = '#mainContent';
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true); 
+
+    $('.check-btn').click(async function () {
+      const urlToInclude = 'index/charge.html';
+      const targetSelector = '#mainContent';
+      await includeHTML(urlToInclude, targetSelector);
+      loadpage(true); 
+
+      checkbox();
+      order_modal();
+    });
   });
 
   $('.user').click(async function () {
     const urlToInclude = 'index/login.html';
     const targetSelector = '#mainContent';
     await includeHTML(urlToInclude, targetSelector);
-
-    loadpage('index/login.html');
-    function loadpage() {
-      document.querySelector('#information').style.display = 'none';
-    }
-
+    loadpage(false);
   });
 
   // 페이지 로딩 시 main.html을 로드
   const initialUrlToInclude = 'index/main.html';
   const initialTargetSelector = '#mainContent';
   includeHTML(initialUrlToInclude, initialTargetSelector);
+  loadpage(true); 
+
+
+
+
+
+// URL과 타겟 선택자를 매핑한 배열
+const pages = [
+  'index/main_coffee.html',
+  'index/main_ade.html',
+  'index/main_smoothie.html',
+  'index/main_tea.html',
+  'index/main_dessert.html',
+  'index/main_md.html'
+];
+const targetSelector = '#mainContent';
+
+// 클릭 및 터치 이벤트 추가
+$('.gnb li').on('click touchstart', async function(event) {
+  const index = $('.gnb li').index(this);
+  const urlToInclude = pages[index];
+
+  try {
+    await includeHTML(urlToInclude, targetSelector);
+    loadpage(true);
+
+    // cfpop이미지 불러들여오기
+    const proBoxes = document.querySelectorAll('.pro_box');
+    proBoxes.forEach(function(box) {
+      box.addEventListener('click', function() {
+        const imgSrc = box.querySelector('.pro_img img').src;
+        // a_blank 링크로 연결
+        window.open(`./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`, '_blank');
+      });
+    });
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+});
+
+
+
 
 });

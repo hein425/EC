@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <h1>COFFEE</h1>
-        <img src="../img/popup/coffe.png" alt="상품 이미지">
-        <P style="text-align: center;" >아메리카노</P>
+        <p class="CFpop_img"><img src="../img/popup/coffe.png" alt="상품 이미지"></p>
+        <P class="CFpop_title" style="text-align: center;" >아메리카노</P>
         <form>
             <div class="form-group">
                 <label for="bean-type">Beans</label>
@@ -86,7 +86,23 @@
           iceSliderContainer.style.display = 'none';
       }
   });
+
+
+  // 여기있는 이미지 URL로 변수 저장한다.
+  document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const imgSrc = params.get('img');
+      if (imgSrc) {
+        document.querySelector('.CFpop_img img').src = decodeURIComponent(imgSrc);
+      }
+    });
 </script>
 
 
+<!-- 
+상위 index.html의 .pro_box 를 클릭했을때 ../CFpop.html을 열어라
+
+1. 여기서 .pro_box this의 .pro_img>img를 ../CFpop.html 안의 .CFpop_img 태그 안으로 넣어라
+2. 여기서 .pro_box this의 .pro_text:nth-child(1) p를 ../CFpop.html 안의 .CFpop_title 태그 안으로 넣어라
+ -->
 </html>
