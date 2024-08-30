@@ -34,8 +34,8 @@ $(document).ready(function () {
       initializeSlick();
       initializeDragSlide();
       initializeMembershipButton();
-      checkbox();
-      order_modal();
+      // checkbox();
+      // order_modal();
     } catch (error) {
       console.error('Error loading content:', error);
     }
@@ -232,6 +232,7 @@ $(document).ready(function () {
       await includeHTML(urlToInclude, targetSelector);
       loadpage(true); 
 
+      checkbox();
       order_modal();
     });
   });
@@ -249,7 +250,10 @@ $(document).ready(function () {
   includeHTML(initialUrlToInclude, initialTargetSelector);
   loadpage(true); 
 
-  
+
+
+
+
 // URL과 타겟 선택자를 매핑한 배열
 const pages = [
   'index/main_coffee.html',
@@ -260,27 +264,31 @@ const pages = [
   'index/main_md.html'
 ];
 const targetSelector = '#mainContent';
-// 모든 메뉴 항목에 대해 클릭 이벤트 추가
-$('.gnb li').each(function(index) {
-  $(this).click(async function() {
-    const urlToInclude = pages[index];
+
+// 클릭 및 터치 이벤트 추가
+$('.gnb li').on('click touchstart', async function(event) {
+  const index = $('.gnb li').index(this);
+  const urlToInclude = pages[index];
+
+  try {
     await includeHTML(urlToInclude, targetSelector);
     loadpage(true);
- 
+
     // cfpop이미지 불러들여오기
     const proBoxes = document.querySelectorAll('.pro_box');
-      proBoxes.forEach(function(box) {
-        box.addEventListener('click', function() {
-          const imgSrc = box.querySelector('.pro_img img').src;
-          // a 링크로 연결
-          // window.location.href = `./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`;
-          
-          // a_blank 링크로 연결
-          window.open(`./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`, '_blank');
-        });
+    proBoxes.forEach(function(box) {
+      box.addEventListener('click', function() {
+        const imgSrc = box.querySelector('.pro_img img').src;
+        // a_blank 링크로 연결
+        window.open(`./index/CFpop.html?img=${encodeURIComponent(imgSrc)}`, '_blank');
       });
-  });
+    });
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
 });
+
+
 
 
 });
